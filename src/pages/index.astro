@@ -14,18 +14,11 @@ import Socials from "../components/Socials.astro";
 				while still building stuff people can actually
 				use.
 			</p>
-			<p>i mainly work with:</p>
 		</div>
 
-		<div class="tech-stack-section">
-			<span class="stack-button">[c]</span>
-			<span class="stack-button">[python]</span>
-			<span class="stack-button">[lua]</span>
-			<span class="stack-button">[node.js]</span>
-			<span class="stack-button">[sqlite]</span>
-			<span class="stack-button">[neovim]</span>
-			<span class="stack-button">[docker]</span>
-			<span class="stack-button">[arch linux]</span>
+		<div class="socials-row">
+			<span class="socials-label">here are my socials:</span>
+			<Socials />
 		</div>
 
 		<div class="intro-section">
@@ -40,6 +33,18 @@ import Socials from "../components/Socials.astro";
 				> whenever i build something or stumble onto something
 				worth sharing.
 			</p>
+			<p>i mainly work with:</p>
+		</div>
+
+		<div class="tech-stack-section">
+			<span class="stack-button">[c]</span>
+			<span class="stack-button">[python]</span>
+			<span class="stack-button">[lua]</span>
+			<span class="stack-button">[node.js]</span>
+			<span class="stack-button">[sqlite]</span>
+			<span class="stack-button">[neovim]</span>
+			<span class="stack-button">[docker]</span>
+			<span class="stack-button">[arch linux]</span>
 		</div>
 
 		<div class="contact-section">
@@ -58,7 +63,7 @@ import Socials from "../components/Socials.astro";
 				games, reading random blogs/books, or watching
 				something. i have a bunch of social links around
 				here somewhere, but i'm not active on most of
-				them if you want a quick reply, <a
+				them. if you want a quick reply, <a
 					class="discord-link"
 					href="https://discord.com/users/1345276369566699530"
 					>discord</a
@@ -66,7 +71,6 @@ import Socials from "../components/Socials.astro";
 			</p>
 		</div>
 	</section>
-	<Socials />
 </Home>
 
 <style>
@@ -133,7 +137,7 @@ import Socials from "../components/Socials.astro";
 	.tech-stack-section {
 		display: flex;
 		color: var(--color-text-main);
-		margin-top: 35px;
+		margin-top: 14px;
 		margin-bottom: 35px;
 		text-align: center;
 		flex-wrap: wrap;
@@ -154,5 +158,19 @@ import Socials from "../components/Socials.astro";
 	}
 	.contact-section p:last-child {
 		margin-bottom: 0;
+	}
+
+	.socials-row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 14px;
+		margin-top: 12px;
+		width: 100%;
+	}
+
+	.socials-label {
+		color: var(--color-text-muted);
+		white-space: nowrap;
 	}
 </style>
