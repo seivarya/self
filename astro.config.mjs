@@ -9,23 +9,23 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-        site: "https://seivarya.in",
-        integrations: [
-                mdx(), // theme isn't req. for now ig
-                mermaid(),
-                sitemap(),
-        ],
+	site: "https://seivarya.in",
+	integrations: [
+		mdx(), // theme isn't req. for now ig
+		mermaid(),
+		sitemap(),
+	],
 
-        markdown: {
-                shikiConfig: {
-                        theme: "catppuccin-macchiato",
-                },
-        },
-        vite: {
-                build: {},
-        },
+	markdown: {
+		shikiConfig: {
+			theme: "catppuccin-macchiato",
+		},
+	},
+	vite: {
+		build: {},
+	},
 
-        adapter: cloudflare(),
-        prefetch: true,
-        output: "static",
+	adapter: cloudflare(),
+	prefetch: true,
+	output: "static",
 });

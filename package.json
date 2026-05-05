@@ -15,6 +15,7 @@
                 "@astrojs/mdx": "^5.0.2",
                 "@astrojs/rss": "^4.0.16",
                 "@astrojs/sitemap": "^3.7.1",
+                "@fontsource/open-sans": "^5.2.7",
                 "@fontsource/source-code-pro": "^5.2.7",
                 "@mdx-js/language-server": "^0.6.3",
                 "astro": "^6.0.8",

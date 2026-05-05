@@ -4,88 +4,88 @@ import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
 
 import "../styles/global.css";
-import "@fontsource/source-code-pro";
+import "@fontsource/open-sans";
 import { ClassificationType } from "typescript";
 ---
 
 <!doctype html>
 <html>
-        <head>
-                <meta charset="UTF-8" />
-                <meta name="viewport" content="width=device-width" />
-                <meta name="theme-color" content="#050505" /><title>
-                        seivarya
-                </title><meta name="robots" content="index, follow" /><link
-                        rel="icon"
-                        href="/self.webp"
-                />
-                <script is:inline>
-                        function applyTheme() {
-                                const savedTheme =
-                                        localStorage.getItem("theme");
-                                if (savedTheme) {
-                                        document.documentElement.setAttribute(
-                                                "data-theme",
-                                                savedTheme,
-                                        );
-                                        if (savedTheme === "light") {
-                                                document.querySelector(
-                                                        'meta[name="theme-color"]',
-                                                )?.setAttribute(
-                                                        "content",
-                                                        "#fdfbfb",
-                                                );
-                                        } else {
-                                                document.querySelector(
-                                                        'meta[name="theme-color"]',
-                                                )?.setAttribute(
-                                                        "content",
-                                                        "#050505",
-                                                );
-                                        }
-                                }
-                        }
-                        applyTheme();
-                        document.addEventListener(
-                                "astro:after-swap",
-                                applyTheme,
-                        );
-                </script>
-        </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#050505" /><title>
+			seivarya
+		</title><meta name="robots" content="index, follow" /><link
+			rel="icon"
+			href="/self.webp"
+		/>
+		<script is:inline>
+			function applyTheme() {
+				const savedTheme =
+					localStorage.getItem("theme");
+				if (savedTheme) {
+					document.documentElement.setAttribute(
+						"data-theme",
+						savedTheme,
+					);
+					if (savedTheme === "light") {
+						document.querySelector(
+							'meta[name="theme-color"]',
+						)?.setAttribute(
+							"content",
+							"#fdfbfb",
+						);
+					} else {
+						document.querySelector(
+							'meta[name="theme-color"]',
+						)?.setAttribute(
+							"content",
+							"#050505",
+						);
+					}
+				}
+			}
+			applyTheme();
+			document.addEventListener(
+				"astro:after-swap",
+				applyTheme,
+			);
+		</script>
+	</head>
 
-        <body>
-                <div class="main-container">
-                        <Header />
-                        <slot />
-                        <Footer />
-                        <ClientRouter />
-                </div>
-                <script>
-                        // disable right click context menu, coz it looks cool
-                        document.addEventListener("contextmenu", (event) => {
-                                event.preventDefault();
-                        });
-                </script>
-        </body>
+	<body>
+		<div class="main-container">
+			<Header />
+			<slot />
+			<Footer />
+			<ClientRouter />
+		</div>
+		<script>
+			// disable right click context menu, coz it looks cool
+			document.addEventListener("contextmenu", (event) => {
+				event.preventDefault();
+			});
+		</script>
+	</body>
 
-        <style>
-                .main-container {
-                        box-sizing: border-box;
-                        display: flex;
-                        flex-direction: column;
-                        min-height: 100svh;
-                        width: 75vw;
-                        max-width: 720px;
-                        color: var(--color-text-primary);
-                        padding: 20px 10px;
-                        margin: 0 auto;
-                }
+	<style>
+		.main-container {
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			min-height: 100svh;
+			width: 75vw;
+			max-width: 720px;
+			color: var(--color-text-primary);
+			padding: 20px 10px;
+			margin: 0 auto;
+		}
 
-                @media (max-width: 768px) {
-                        .main-container {
-                                width: 90vw;
-                                padding: 24px 0;
-                        }
-                }
-        </style>
+		@media (max-width: 768px) {
+			.main-container {
+				width: 90vw;
+				padding: 24px 0;
+			}
+		}
+	</style>
 </html>

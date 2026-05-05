@@ -8,80 +8,80 @@ const discord = "https://discord.com/users/1345276369566699530";
 ---
 
 <div class="socials-container">
-        <a href={github} class="social-link github">github</a>
-        <a href={twitter} class="social-link twitter">twitter</a>
-        <a href={telegram} class="social-link telegram">telegram</a>
-        <a href={linkedin} class="social-link linkedin">linkedin</a>
-        <a href={chess} class="social-link chess">chess</a>
-        <a href={discord} class="social-link discord-social">discord</a>
+	<a href={github} class="social-link github">github</a>
+	<a href={twitter} class="social-link twitter">twitter</a>
+	<a href={telegram} class="social-link telegram">telegram</a>
+	<a href={linkedin} class="social-link linkedin">linkedin</a>
+	<a href={chess} class="social-link chess">chess</a>
+	<a href={discord} class="social-link discord-social">discord</a>
 </div>
 
 <style>
-        .socials-container {
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 30px;
-                padding-bottom: 10px;
-                flex-wrap: wrap;
-                gap: 15px;
-        }
+	.socials-container {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 30px;
+		padding-bottom: 10px;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
 
-        .social-link {
-                color: var(--color-text-muted);
-                text-decoration: none;
-                border-bottom: 1px solid var(--color-border);
-                padding-bottom: 2px;
-                font-weight: 500;
-                transition:
-                        color 0.25s ease,
-                        border-bottom-color 0.25s ease;
-        }
+	.social-link {
+		color: var(--color-text-muted);
+		text-decoration: none;
+		border-bottom: 1px solid var(--color-border);
+		padding-bottom: 2px;
+		font-weight: 500;
+		transition:
+			color 0.25s ease,
+			border-bottom-color 0.25s ease;
+	}
 
-        .social-link:hover {
-                /* base hover scale down just in case */
-        }
+	.social-link:hover {
+		/* base hover scale down just in case */
+	}
 
-        .social-link.github:hover {
-                color: var(--color-brand-github);
-                border-bottom-color: var(--color-brand-github);
-        }
+	.social-link.github:hover {
+		color: var(--color-brand-github);
+		border-bottom-color: var(--color-brand-github);
+	}
 
-        .social-link.twitter:hover {
-                color: var(--color-brand-twitter);
-                border-bottom-color: var(--color-brand-twitter);
-        }
+	.social-link.twitter:hover {
+		color: var(--color-brand-twitter);
+		border-bottom-color: var(--color-brand-twitter);
+	}
 
-        .social-link.telegram:hover {
-                color: var(--color-brand-telegram);
-                border-bottom-color: var(--color-brand-telegram);
-        }
+	.social-link.telegram:hover {
+		color: var(--color-brand-telegram);
+		border-bottom-color: var(--color-brand-telegram);
+	}
 
-        .social-link.linkedin:hover {
-                color: var(--color-brand-linkedin);
-                border-bottom-color: var(--color-brand-linkedin);
-        }
+	.social-link.linkedin:hover {
+		color: var(--color-brand-linkedin);
+		border-bottom-color: var(--color-brand-linkedin);
+	}
 
-        .social-link.chess:hover {
-                color: #86efac;
-                border-bottom-color: #86efac;
-        }
+	.social-link.chess:hover {
+		color: #86efac;
+		border-bottom-color: #86efac;
+	}
 
-        .social-link.discord-social:hover {
-                color: var(--color-brand-discord);
-                border-bottom-color: var(--color-brand-discord);
-        }
+	.social-link.discord-social:hover {
+		color: var(--color-brand-discord);
+		border-bottom-color: var(--color-brand-discord);
+	}
 
-        @media (max-width: 600px) {
-                .socials-container {
-                        justify-content: space-between;
-                        gap: 20px;
-                        margin-top: 25px;
-                        margin-bottom: 15px;
-                }
-                .social-link.discord-social {
-                        display: none;
-                }
-        }
+	@media (max-width: 600px) {
+		.socials-container {
+			justify-content: space-between;
+			gap: 20px;
+			margin-top: 25px;
+			margin-bottom: 15px;
+		}
+		.social-link.discord-social {
+			display: none;
+		}
+	}
 </style>
