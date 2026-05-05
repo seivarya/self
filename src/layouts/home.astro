@@ -4,8 +4,7 @@ import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
 
 import "../styles/global.css";
-import "@fontsource/open-sans";
-import { ClassificationType } from "typescript";
+import "@fontsource/source-code-pro";
 ---
 
 <!doctype html>
@@ -13,7 +12,7 @@ import { ClassificationType } from "typescript";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="theme-color" content="#050505" /><title>
+		<meta name="theme-color" content="#0f0e1a" /><title>
 			seivarya
 		</title><meta name="robots" content="index, follow" /><link
 			rel="icon"
@@ -33,14 +32,14 @@ import { ClassificationType } from "typescript";
 							'meta[name="theme-color"]',
 						)?.setAttribute(
 							"content",
-							"#fdfbfb",
+							"#e1e2e7",
 						);
 					} else {
 						document.querySelector(
 							'meta[name="theme-color"]',
 						)?.setAttribute(
 							"content",
-							"#050505",
+							"#13141f",
 						);
 					}
 				}
@@ -75,7 +74,7 @@ import { ClassificationType } from "typescript";
 			flex-direction: column;
 			min-height: 100svh;
 			width: 75vw;
-			max-width: 720px;
+			max-width: 750px;
 			color: var(--color-text-primary);
 			padding: 20px 10px;
 			margin: 0 auto;

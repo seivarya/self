@@ -5,47 +5,49 @@ html {
 }
 
 :root {
-	/* if you want to change the theme of site, configure this palatte using gpitty (coz i did too) */
 
-	--color-bg: #121212;
-	--color-text-main: #ffffff;
-	--color-text-primary: #e0e0e0;
-	--color-text-muted: #999999;
-	--color-text-hover: #ffffff;
-	--color-border: #2a2a2a;
-	--color-bg-alt: #111111;
-	--color-text-italic: #cccccc;
+	--color-bg: #0f0e1a;
+	--color-text-main: #c0caf5;
+	--color-text-primary: #a9b1d6;
+	--color-text-muted: #565f89;
+	--color-text-hover: #c0caf5;
+	--color-border: #1c1b2e;
+	--color-bg-alt: #0b0a16;
+	--color-text-italic: #bb9af7;
 
-	--color-tech-stack: #999999;
-	--color-tech-stack-span: #e0e0e0;
-	--color-loading: #e0e0e0;
+	--color-tech-stack: #565f89;
+	--color-tech-stack-span: #a9b1d6;
+	--color-loading: #a9b1d6;
 
-	--color-brand-github: #f2f0f5;
-	--color-brand-twitter: #6ea8ff;
-	--color-brand-linkedin: #6ea8ff;
-	--color-brand-telegram: #4cc7db;
-	--color-brand-discord: #9da6ff;
+	--color-brand-github: #e6edf3;
+	--color-brand-twitter: #1d9bf0;
+	--color-brand-linkedin: #0a66c2;
+	--color-brand-telegram: #2aabee;
+	--color-brand-discord: #5865f2;
+	--color-brand-chess: #81b64c;
 }
 
 html[data-theme="light"] {
-	--color-bg: #fdfbfb;
-	--color-text-main: #b85a73;
-	--color-text-primary: #333333;
-	--color-text-muted: #777777;
-	--color-text-hover: #d1648a;
-	--color-border: #e6dce0;
-	--color-bg-alt: #f5f0f2;
-	--color-text-italic: #d1648a;
 
-	--color-tech-stack: #777777;
-	--color-tech-stack-span: #333333;
-	--color-loading: #333333;
+	--color-bg: #e1e2e7;
+	--color-text-main: #343b58;
+	--color-text-primary: #3b3f58;
+	--color-text-muted: #7a81a8;
+	--color-text-hover: #343b58;
+	--color-border: #c4c8da;
+	--color-bg-alt: #d5d6db;
+	--color-text-italic: #7847bd;
 
-	--color-brand-github: #181717;
+	--color-tech-stack: #7a81a8;
+	--color-tech-stack-span: #3b3f58;
+	--color-loading: #343b58;
+
+	--color-brand-github: #24292f;
 	--color-brand-twitter: #1da1f2;
 	--color-brand-linkedin: #0a66c2;
 	--color-brand-telegram: #229ed9;
 	--color-brand-discord: #5865f2;
+	--color-brand-chess: #5a8a36;
 }
 
 body {
@@ -75,39 +77,7 @@ a {
 	}
 }
 
-.nav-bar {
-	display: flex;
-	align-items: center;
-	gap: 60px;
-	margin-top: 40px;
-	margin-bottom: 30px;
-	width: fit-content;
-	flex-wrap: wrap;
-}
 
-.nav-row {
-	display: contents;
-}
-
-.nav-bar a,
-.nav-bar a:visited,
-.nav-bar a:active {
-	display: inline-block;
-	color: var(--color-text-muted);
-	text-decoration: none;
-	text-align: center;
-	border-bottom: 1px solid var(--color-border);
-	padding-bottom: 2px;
-	transition:
-		color 0.25s ease,
-		border-bottom-color 0.25s ease;
-}
-
-.nav-bar a:hover,
-.nav-bar a:focus {
-	color: var(--color-text-main);
-	border-bottom-color: var(--color-text-main);
-}
 
 p a,
 li a {
@@ -126,19 +96,4 @@ li a:hover {
 	border-bottom-color: var(--color-text-main);
 }
 
-@media (max-width: 900px) {
-	.nav-bar {
-		flex-direction: column;
-		align-items: center;
-		gap: 25px;
-		justify-content: flex-end;
-		margin-top: 10px;
-	}
 
-	.nav-row {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 30px;
-	}
-}

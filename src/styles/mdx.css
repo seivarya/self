@@ -1,5 +1,5 @@
 .post-data {
-	line-height: 1.7;
+	line-height: 1.9;
 	color: var(--color-text-primary);
 	font-size: 1rem;
 	width: 100%;
@@ -27,20 +27,20 @@
 }
 
 .post-data h1 {
-	font-size: 2rem;
+	font-size: 1.25rem;
 }
 
 .post-data h2 {
-	font-size: 1.5rem;
+	font-size: 1.15rem;
 }
 
 .post-data h3 {
-	font-size: 1.25rem;
+	font-size: 1rem;
 }
 
 /* Paragraphs */
 .post-data p {
-	margin-bottom: 1.2em;
+	margin-bottom: 1.6em;
 }
 
 /* Links */
@@ -66,7 +66,7 @@
 /* Emphasized Text */
 .post-data strong {
 	color: var(--color-text-main);
-	font-weight: 600;
+	font-weight: 400;
 }
 
 .post-data em {
@@ -145,5 +145,5 @@
 }
 
 .post-data li {
-	margin-bottom: 0.4em;
+	margin-bottom: 0.6em;
 }

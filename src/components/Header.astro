@@ -8,7 +8,7 @@ import Navigation from "./Navigation.astro";
 	<div class="clock-display">
 		<svg
 			class="clock"
-			fill="var(--color-text-muted)"
+			fill="var(--color-text-italic)"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 			width="24px"
@@ -24,20 +24,19 @@ import Navigation from "./Navigation.astro";
 
 <div class="nav-container">
 	<div class="avatar-container">
-		<a
-			href="/"
-			class="avatar-link"
-			aria-label="home"
-			style="display: contents;"
-		>
-			<img
-				class="avatar-image"
-				src="/self.webp"
-				width="90"
-				height="90"
-				alt="avatar"
-			/>
-		</a>
+		<section class="profile-section">
+			<div class="name-container">
+				<a
+					id="theme-toggle"
+					class="author-name"
+					style="text-decoration: none; cursor: pointer;"
+					title="Toggle Theme"
+					><span class="username">shivang</span
+					></a
+				>
+				<a class="userrole" href="/">engineer</a>
+			</div>
+		</section>
 		<Navigation />
 	</div>
 </div>
@@ -48,18 +47,60 @@ import Navigation from "./Navigation.astro";
 		justify-content: space-between;
 		align-items: center;
 	}
+	.profile-section {
+		display: flex;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+	.name-container {
+		display: flex;
+		align-items: left;
+		flex-direction: column;
+		gap: 15px;
+	}
+	.author-name {
+		display: block;
+	}
+	.username {
+		margin: 0;
+		font-weight: bold;
+		font-size: 1.3rem;
+		color: var(--color-text-main);
+		letter-spacing: 0.5px;
+		display: block;
+		line-height: 1;
+	}
+	.userrole {
+		width: fit-content;
+		text-decoration: none;
+		padding-bottom: 2px;
+		color: var(--color-text-muted);
+		font-weight: 300;
+		font-size: 1.1rem;
+		line-height: 1;
+		cursor: context-menu;
+		transition:
+			color 0.25s ease,
+			border-bottom-color 0.25s ease;
+	}
+
+	.userrole:hover {
+		color: var(--color-text-main);
+	}
 
 	.top-bar {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		letter-spacing: 1.5px;
-		margin-bottom: 60px;
+		margin-bottom: 40px;
 		font-size: 0.95rem;
 		width: 100%;
 	}
 	.est-badge {
 		color: var(--color-text-muted);
+		border: 1px solid var(--color-border);
+		padding: 2px 8px;
 	}
 	.clock-display {
 		display: flex;
@@ -73,6 +114,7 @@ import Navigation from "./Navigation.astro";
 	.avatar-container {
 		display: flex;
 		flex-direction: row;
+		align-items: flex-start;
 		justify-content: space-between;
 		width: 100%;
 		margin-bottom: 40px;
@@ -86,6 +128,8 @@ import Navigation from "./Navigation.astro";
 	@media (max-width: 826px) {
 		.top-bar {
 			margin-bottom: 40px;
+			border-bottom: 1px solid var(--color-border);
+			padding-bottom: 12px;
 		}
 		.nav-container {
 			justify-content: center;
@@ -98,3 +142,34 @@ import Navigation from "./Navigation.astro";
 		}
 	}
 </style>
+
+<script>
+	document.addEventListener("astro:page-load", () => {
+		const themeToggle = document.getElementById("theme-toggle");
+		if (!themeToggle) return;
+		themeToggle.addEventListener("click", () => {
+			const currentTheme =
+				document.documentElement.getAttribute(
+					"data-theme",
+				) || "dark";
+			const newTheme =
+				currentTheme === "light" ? "dark" : "light";
+			document.documentElement.setAttribute(
+				"data-theme",
+				newTheme,
+			);
+			localStorage.setItem("theme", newTheme);
+			const metaThemeColor = document.querySelector(
+				'meta[name="theme-color"]',
+			);
+			if (metaThemeColor) {
+				metaThemeColor.setAttribute(
+					"content",
+					newTheme === "light"
+						? "#e1e2e7"
+						: "#0b0d0e",
+				);
+			}
+		});
+	});
+</script>
