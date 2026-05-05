@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "typescript": "^5.9.3",
-    "wrangler": "^4.87.0"
+    "wrangler": "^4.88.0"
   },
   "overrides": {
     "vite": "^7"
