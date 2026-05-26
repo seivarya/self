@@ -15,11 +15,11 @@ import "@fontsource/source-code-pro";
 		<meta name="theme-color" content="#0f0e1a" /><title>
 			seivarya
 		</title><meta name="robots" content="index, follow" /><link
-			rel="icon"
-			href="/self.webp"
-		/>
-		<script is:inline>
-			function applyTheme() {
+					    rel="icon"
+					    href="/self.webp"
+					    />
+<script is:inline>
+	function applyTheme() {
 				const savedTheme =
 					localStorage.getItem("theme");
 				if (savedTheme) {
@@ -49,7 +49,7 @@ import "@fontsource/source-code-pro";
 				"astro:after-swap",
 				applyTheme,
 			);
-		</script>
+</script>
 	</head>
 
 	<body>
@@ -59,32 +59,32 @@ import "@fontsource/source-code-pro";
 			<Footer />
 			<ClientRouter />
 		</div>
-		<script>
-			// disable right click context menu, coz it looks cool
-			document.addEventListener("contextmenu", (event) => {
-				event.preventDefault();
-			});
-		</script>
+<script>
+	// disable right click context menu, coz it looks cool
+	document.addEventListener("contextmenu", (event) => {
+		event.preventDefault();
+	});
+</script>
 	</body>
 
-	<style>
-		.main-container {
-			box-sizing: border-box;
-			display: flex;
-			flex-direction: column;
-			min-height: 100svh;
-			width: 75vw;
-			max-width: 750px;
-			color: var(--color-text-primary);
-			padding: 20px 10px;
-			margin: 0 auto;
-		}
+<style>
+	.main-container {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		min-height: 100svh;
+		width: 75vw;
+		max-width: 750px;
+		color: var(--color-text-primary);
+		padding: 20px 10px;
+		margin: 0 auto;
+	}
 
-		@media (max-width: 768px) {
-			.main-container {
-				width: 90vw;
-				padding: 24px 0;
-			}
+	@media (max-width: 768px) {
+		.main-container {
+			width: 90vw;
+			padding: 24px 0;
 		}
-	</style>
-</html>
+	}
+</style>
+	</html>

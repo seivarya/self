@@ -22,10 +22,10 @@ html {
 	--color-brand-github: #e6edf3;
 	--color-brand-twitter: #1d9bf0;
 	--color-brand-linkedin: #0a66c2;
-	--color-brand-telegram: #2aabee;
-	--color-brand-discord: #5865f2;
+	/* --color-brand-telegram: #2aabee; */
+	/* --color-brand-discord: #5865f2; */
 	--color-brand-chess: #ffffff;
-	--color-brand-bluesky: #0085ff;
+	/* --color-brand-bluesky: #0085ff; */
 }
 
 html[data-theme="light"] {
@@ -85,8 +85,8 @@ li a {
 	border-bottom: 1px solid rgba(196, 149, 255, 0.3);
 	padding-bottom: 1px;
 	transition:
-		border-bottom-color 0.25s ease,
-		opacity 0.25s ease;
+	border-bottom-color 0.25s ease,
+	opacity 0.25s ease;
 }
 
 p a:hover,

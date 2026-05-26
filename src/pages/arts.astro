@@ -3,30 +3,30 @@ import Home from "../layouts/home.astro";
 import ArtBox from "../components/Artbox.astro";
 
 // art imports
-import devilman from "../content/arts/devilman_crybaby.png";
+// import devilman from "../content/arts/devilman_crybaby.png";
 
 const images = [
-	{
-		title: "miki makimura from devilman crybaby",
-		link: devilman.src,
-	},
+{
+title: "miki makimura from devilman crybaby",
+link: null,
+},
 ];
 ---
 
 <Home>
 	<h1 class="page-title">arts</h1>
 	<p class="page-subtitle">
-		things i've drawn / tried to draw over the years. it's not some
-		"hobby" i just picked it on a whim so don't expect anything
-		fancy. <br /><br />ps: this section is still incomplete i am
-		refining my old drawings a bit for showcasing.
+	things i've drawn / tried to draw over the years. it's not some
+	"hobby" i just picked it on a whim so don't expect anything
+	fancy. <br /><br />ps: this section is still incomplete i am
+	refining my old drawings a bit for showcasing.
 	</p>
 
 	<div class="list-container">
 		{
-			images.map((art) => (
-				<ArtBox title={art.title} link={art.link} />
-			))
+		images.map((art) => (
+		<ArtBox title={art.title} link={art.link} />
+		))
 		}
 	</div>
 </Home>
