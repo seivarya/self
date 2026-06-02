@@ -6,31 +6,35 @@ const { pathname } = Astro.url;
 	<div class="nav-row">
 		<a href="/" class:list={[{ active: pathname === "/" }]}>home</a>
 		<a
-				href="/projects"
-				class:list={[
-				{ active: pathname.startsWith("/projects") },
-				]}
-				data-astro-prefetch="hover">projects</a
-			>
-			<a
-					href="/notes"
-					class:list={[{ active: pathname.startsWith("/notes") }]}
-					data-astro-prefetch="hover">notes</a
-				>
+			href="/projects"
+			class:list={[{ active: pathname.startsWith("/projects") }]}
+			data-astro-prefetch="hover"
+		>
+			projects
+		</a>
+		<a
+			href="/notes"
+			class:list={[{ active: pathname.startsWith("/notes") }]}
+			data-astro-prefetch="hover"
+		>
+			notes
+		</a>
 	</div>
 	<div class="nav-row">
 		<a
-				href="/writings"
-				class:list={[
-				{ active: pathname.startsWith("/writings") },
-				]}
-				data-astro-prefetch="hover">writings</a
-			>
-			<a
-					href="/arts"
-					class:list={[{ active: pathname.startsWith("/arts") }]}
-					data-astro-prefetch="hover">arts</a
-				>
+			href="/writings"
+			class:list={[{ active: pathname.startsWith("/writings") }]}
+			data-astro-prefetch="hover"
+		>
+			writings
+		</a>
+		<a
+			href="/arts"
+			class:list={[{ active: pathname.startsWith("/arts") }]}
+			data-astro-prefetch="hover"
+		>
+			arts
+		</a>
 	</div>
 </nav>
 

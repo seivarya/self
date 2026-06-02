@@ -1,6 +1,6 @@
 ---
 import Home from "../layouts/home.astro";
-import { mdxOverrides } from "./mdx/Overrides";
+import { mdxOverrides } from "./mdx/overrides";
 import "../styles/mdx.css";
 
 const { data, content } = Astro.props;
@@ -10,7 +10,7 @@ const Content = content;
 <!-- structure of the <post> content -->
 <Home>
 	<div class="post-container">
-		<h2 class="post-heading">{data.title}</h2>
+		<h1 class="post-heading">{data.title}</h1>
 		<article class="post-data">
 			<Content components={mdxOverrides} />
 		</article>
@@ -26,12 +26,5 @@ const Content = content;
 	}
 	.post-data {
 		color: var(--color-text-primary);
-	}
-
-	.post-heading {
-		display: flex;
-		justify-content: flex-start;
-		color: var(--color-text-main);
-		font-size: 1.1rem;
 	}
 </style>
