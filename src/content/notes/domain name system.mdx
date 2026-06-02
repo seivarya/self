@@ -21,16 +21,16 @@ Note: DNS servers only use domain name, they don't care about protocols.
 ### From the Beginning
 
 When we type `my.site.com`, first and foremost our system checks its
-*stub resolver* \[an operating system component that performs DNS name resolutions for applications on the machine, also called as `DNS client`].
+*stub resolver* [an operating system component that performs DNS name resolutions for applications on the machine, also called as `DNS client`].
 
-It'll search its own cache memory \[if we ever visited the site previously the IP will be stored in the cache]. Again, for the sake of 
+It'll search its own cache memory [if we ever visited the site previously the IP will be stored in the cache]. Again, for the sake of 
 learning we are assuming that everything is going wrong to understand the 
 concept well.
 
 Suppose we never visited this website before then what? In that scenario the stub resolver will search its own DNS server instead! Our machine has
 its own network configurations along with the IP address and a DNS server 
 we can talk to. Yes, every operating system has a default DNS server through which our operating system tries to resolve DNS queries. Most of you can already assume that it's google, they have the IP address of
-8.8.8.8 \[almost all the machines have this DNS server as its default].
+8.8.8.8 [almost all the machines have this DNS server as its default].
 
 Our stub resolver will send a DNS query at `8.8.8.8` and ask the IP address
 of `my.site.com`. On this stage almost all the DNS queries can be 
@@ -50,7 +50,7 @@ DNS has hierarchy: on top of that hierarchy we have **root servers**.
 There are total 13 orgs with 13 server groups and few thousand servers 
 spread across the planet. Any domain no matter how deep or hidden it is, 
 can always be found in these servers but the root servers don't resolve 
-the domains they only function on **top level domains \[TLDs]**. `.com, .net, .co`
+the domains they only function on **top level domains [TLDs]**. `.com, .net, .co`
 Are all examples of top level domain. These servers don't care about DNS 
 resolving. They have a list of DNS that handles the specific top level
 domain we have queried. "my.site.com" the root servers identify
@@ -61,7 +61,7 @@ in our request. We call these servers **top level domain servers**.
 
 Now, after getting the IP address of the `.com` TLD DNS server, `8.8.8.8` sends a query to that TLD server. But does it know the IP address we are _actually_ looking for? Remember that our website name is `my.site.com`.
 
-The TLD server has **NS records** for **second level domains** \[SLDs] under `.com`,
+The TLD server has **NS records** for **second level domains** [SLDs] under `.com`,
 such as `google.com`, `portflex.com`, `amazon.com`, in our case it's `site.com`. 
 These records point to the authoritative name servers responsible for 
 those domains.
