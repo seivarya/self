@@ -1,6 +1,6 @@
 ---
 import Home from "../layouts/home.astro";
-import ProjectBox from "../components/ProjectBox.astro";
+import Projectbox from "../components/projectbox.astro";
 
 const projects = [
 	{
@@ -74,29 +74,23 @@ const projects = [
 
 	<div class="projects-grid">
 		{
-		projects.map((p) => (
-		<ProjectBox
-		title={p.title}
-		description={p.description}
-		tags={p.tags}
-		link={p.link}
-		/>
-		))
+			projects.map((p) => (
+				<Projectbox
+					title={p.title}
+					description={p.description}
+					tags={p.tags}
+					link={p.link}
+				/>
+			))
 		}
 	</div>
 </Home>
 
 <style>
-	.page-title {
-		font-size: 1.1rem;
-		margin: 0;
-		color: var(--color-text-main);
-	}
-
 	.page-subtitle {
 		font-size: 1.05rem;
 		color: var(--color-text-muted);
-		margin-top: 15px;
+		margin-top: -15px;
 		margin-bottom: 40px;
 	}
 

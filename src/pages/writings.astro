@@ -1,6 +1,6 @@
 ---
 import Home from "../layouts/home.astro";
-import CleanIndex from "../components/CleanIndex.astro";
+import Cleanindex from "../components/cleanindex.astro";
 import { getCollection } from "astro:content";
 
 function compareFn(obj1, obj2) {
@@ -24,7 +24,7 @@ const writings = objects.sort(compareFn);
 	<div class="list-container">
 		{
 			writings.map((write) => (
-				<CleanIndex
+				<Cleanindex
 					title={write.data.title}
 					date={write.data.date}
 					slug={write.id}
@@ -36,16 +36,10 @@ const writings = objects.sort(compareFn);
 </Home>
 
 <style>
-	.page-title {
-		font-size: 1.1rem;
-		margin: 0;
-		color: var(--color-text-main);
-	}
-
 	.page-subtitle {
 		font-size: 1.05rem;
 		color: var(--color-text-muted);
-		margin-top: 15px;
+		margin-top: -15px;
 		margin-bottom: 40px;
 	}
 

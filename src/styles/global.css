@@ -6,25 +6,27 @@ html {
 }
 
 :root {
-	--color-bg: #1c1c2b;
-	--color-bg-alt: #24273a;
+	--color-bg: #0f0e1a;
+	--color-text-main: #c0caf5;
+	--color-text-primary: #a9b1d6;
+	--color-text-muted: #565f89;
+	--color-text-hover: #c0caf5;
+	--color-border: #1c1b2e;
+	--color-bg-alt: #0b0a16;
+	--color-text-italic: #bb9af7;
 
-	--color-text-main: #cad3f5;
-	--color-text-primary: #b8c0e0;
-	--color-text-muted: #939ab7;
-	--color-text-hover: #f5f7ff;
-	--color-text-italic: #c6a0f6;
-
-	--color-border: #4a4f69;
-
-	--color-loading: #cad3f5;
+	--color-tech-stack: #565f89;
+	--color-tech-stack-span: #a9b1d6;
+	--color-loading: #a9b1d6;
 
 	--color-brand-github: #e6edf3;
 	--color-brand-twitter: #1d9bf0;
 	--color-brand-linkedin: #0a66c2;
 	--color-brand-telegram: #2aabee;
+	--color-brand-discord: #5865f2;
 	--color-brand-chess: #ffffff;
 	--color-brand-bluesky: #0085ff;
+	--color-link-underline: rgba(187, 154, 247, 0.3);
 }
 
 html[data-theme="light"] {
@@ -50,6 +52,7 @@ html[data-theme="light"] {
 	--color-brand-discord: #5865f2;
 	--color-brand-chess: #555555;
 	--color-brand-bluesky: #1185fe;
+	--color-link-underline: rgba(176, 106, 140, 0.3);
 }
 
 body {
@@ -83,15 +86,27 @@ p a,
 li a {
 	color: var(--color-text-main);
 	text-decoration: none;
-	border-bottom: 1px solid rgba(196, 149, 255, 0.3);
+	border-bottom: 1px solid var(--color-link-underline);
 	padding-bottom: 1px;
 	transition:
-	border-bottom-color 0.25s ease,
-	opacity 0.25s ease;
+		border-bottom-color 0.25s ease,
+		opacity 0.25s ease;
 }
 
 p a:hover,
 li a:hover {
 	opacity: 0.85;
 	border-bottom-color: var(--color-text-main);
+}
+
+h1.page-title,
+h1.post-heading {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--color-text-main);
+	border-bottom: 1px solid var(--color-border);
+	padding-bottom: 0.3em;
+	margin-top: 0;
+	margin-bottom: 30px;
+	width: 100%;
 }
