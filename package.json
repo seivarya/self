@@ -19,7 +19,6 @@
     "@fontsource/source-code-pro": "^5.2.7",
     "@mdx-js/language-server": "^0.6.3",
     "astro": "^6.3.7",
-    "astro-mermaid": "^2.0.1",
     "mermaid": "^11.13.0"
   },
   "devDependencies": {

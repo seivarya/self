@@ -6,41 +6,42 @@ html {
 }
 
 :root {
-	--color-bg: #0f0e1a;
-	--color-text-main: #c0caf5;
-	--color-text-primary: #a9b1d6;
-	--color-text-muted: #565f89;
-	--color-text-hover: #c0caf5;
-	--color-border: #1c1b2e;
-	--color-bg-alt: #0b0a16;
-	--color-text-italic: #bb9af7;
+	--color-bg: #1c1c2b;
+	--color-bg-alt: #24273a;
 
-	--color-tech-stack: #565f89;
-	--color-tech-stack-span: #a9b1d6;
-	--color-loading: #a9b1d6;
+	--color-text-main: #cad3f5;
+	--color-text-primary: #b8c0e0;
+	--color-text-muted: #939ab7;
+	--color-text-hover: #f5f7ff;
+	--color-text-italic: #c6a0f6;
+
+	--color-border: #4a4f69;
+
+	--color-loading: #cad3f5;
 
 	--color-brand-github: #e6edf3;
 	--color-brand-twitter: #1d9bf0;
 	--color-brand-linkedin: #0a66c2;
-	/* --color-brand-telegram: #2aabee; */
-	/* --color-brand-discord: #5865f2; */
+	--color-brand-telegram: #2aabee;
 	--color-brand-chess: #ffffff;
-	/* --color-brand-bluesky: #0085ff; */
+	--color-brand-bluesky: #0085ff;
 }
 
 html[data-theme="light"] {
-	--color-bg: #e1e2e7;
-	--color-text-main: #343b58;
-	--color-text-primary: #3b3f58;
-	--color-text-muted: #7a81a8;
-	--color-text-hover: #343b58;
-	--color-border: #c4c8da;
-	--color-bg-alt: #d5d6db;
-	--color-text-italic: #7847bd;
+	--color-bg: #fff8f8;
+	--color-bg-alt: #f8efef;
 
-	--color-tech-stack: #7a81a8;
-	--color-tech-stack-span: #3b3f58;
-	--color-loading: #343b58;
+	--color-text-main: #4f3d46;
+	--color-text-primary: #66515b;
+	--color-text-muted: #a08c95;
+	--color-text-hover: #3f3138;
+	--color-text-italic: #b06a8c;
+
+	--color-border: #ead7de;
+
+	--color-tech-stack: #9f8792;
+	--color-tech-stack-span: #5d4953;
+	--color-loading: #4f3d46;
 
 	--color-brand-github: #181717;
 	--color-brand-twitter: #1da1f2;

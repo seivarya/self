@@ -1,0 +1,62 @@
+---
+import sites from "../content/data/webring.json";
+
+interface site {
+	name: string;
+	url: string;
+}
+---
+
+<div class="main-container">
+	<div>
+		<h4 class="webring-title">cool people i know.</h4>
+	</div>
+
+	<div class="webring-container">
+		{sites.map((site: site) => (
+			<a class="webring-site" href={site.url}>{site.name}</a>
+		))}
+	</div>
+</div>
+
+<style>
+	.main-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.webring-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.5rem;
+		align-items: center;
+		justify-content: center;
+	}
+	.webring-title {
+		display: inline-block;
+		font-weight: 100;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		padding-bottom: 1px;
+		border-bottom-color: var(--color-text-muted);
+		opacity 0.25s ease;
+	}
+
+	.webring-site {
+		color: var(--color-text-muted);
+		text-decoration: none;
+		white-space: nowrap;
+		transition: color 150ms ease;
+	}
+
+	.webring-site:hover {
+		color: var(--color-text-main);
+	}
+
+	@media (max-width: 600px) {
+		.webring-container {
+			gap: 0.35rem 1rem;
+		}
+	}
+</style></style>
+
