@@ -3,14 +3,14 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html style="background-color: #050505;">
+<html>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>404 - Not Found</title>
-		<meta name="theme-color" content="#050505" />
+		<meta name="theme-color" content="#0f0e1a" />
 	</head>
-	<body style="background-color: #050505; margin: 0;">
+	<body>
 		<div class="error-container">
 			<img src="/404.webp" alt="404" class="error-img" />
 			<a href="/" class="home-link">go back home</a>
@@ -26,7 +26,7 @@ import "../styles/global.css";
 		justify-content: center;
 		min-height: 100vh;
 		gap: 20px;
-		background-color: var(--color-bg-main, #050505);
+		background-color: var(--color-bg);
 	}
 
 	.error-img {
@@ -36,18 +36,18 @@ import "../styles/global.css";
 	}
 
 	.home-link {
-		color: var(--color-text-muted, #999999);
+		color: var(--color-text-muted);
 		text-decoration: underline;
-		text-decoration-color: var(--color-border, #2a2a2a);
+		text-decoration-color: var(--color-border);
 		text-underline-offset: 4px;
 		font-family: inherit;
 		transition:
 			color 0.2s,
-		text-decoration-color 0.2s;
+			text-decoration-color 0.2s;
 	}
 
 	.home-link:hover {
-		color: var(--color-text-hover, #ffffff);
-		text-decoration-color: var(--color-text-hover, #ffffff);
+		color: var(--color-text-hover);
+		text-decoration-color: var(--color-text-hover);
 	}
 </style>

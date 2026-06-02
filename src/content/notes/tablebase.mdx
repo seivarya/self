@@ -24,14 +24,14 @@ Suppose you move your pawn one square that’s state x. If instead you move anot
 
 Now let’s use some basic permutations and combinations to estimate how many configurations are possible on a chessboard.
 
-#### **Static Piece Arrangement**  
+#### Static Piece Arrangement
 
 If we only care about how pieces are placed on the 64 squares, the count is limited. Each square can hold 12 possible pieces (6 for each color) or be empty.  
 So that’s 13⁶⁴. It looks insanely huge, but the number drops fast once we eliminate impossible or invalid configurations.  
 *Fun fact*: there are board setups you can _never_ reach in a real game — they’re invalid. You can create one on [lichess.org](https://lichess.org/editor) and play
 around with it.
 
-#### **Dynamic Game State** 
+#### Dynamic Game State
 
 Now, if we include extra information like whose turn it is, castling rights, en passant, move counters, and repetition history — the number of 
 probabilities spike up.  
@@ -48,4 +48,4 @@ When you see an engine running at “depth 26” it means that the engine explor
 Even then, the engine doesn’t explore the _full_ tree.
 The average branching factor in chess is around 35, and no computer in the world can represent 35^26 positions. Engines use techniques like **search pruning** to optimize their search, but as of now, ~3700 Elo is the best we can achieve.
 
-\<incomplete>
+*incomplete*

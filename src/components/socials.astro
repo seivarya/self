@@ -36,6 +36,7 @@ const chess = "https://www.chess.com/member/seivarya";
 		<a href={linkedin}>
 			<div class="icon linkedin-container">
 				<svg
+					class="linkedin-svg"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 21 21"
 					aria-hidden="true"
@@ -106,7 +107,7 @@ const chess = "https://www.chess.com/member/seivarya";
 		cursor: pointer;
 		transition:
 			color 0.25s ease,
-		transform 0.25s ease;
+			transform 0.25s ease;
 	}
 
 	.icon svg {
@@ -114,11 +115,9 @@ const chess = "https://www.chess.com/member/seivarya";
 		height: 19px;
 		fill: currentColor;
 	}
-
 	.linkedin-container svg path {
-		fill: currentColor;
+		fill: var(--color-brand-linkedin);
 	}
-
 	.icon:hover {
 		transform: scale(1.1);
 	}
