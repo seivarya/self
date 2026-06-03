@@ -2,7 +2,7 @@
 const { title, link } = Astro.props;
 ---
 
-<a class="img-container" href={link} target="_blank">
+<a class="img-container" href={link} target="_blank" rel="noopener noreferrer">
 	<img class="img" src={link} alt={link} />
 
 	<div class="img-footer">

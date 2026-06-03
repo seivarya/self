@@ -16,6 +16,8 @@ const { title, description, tags, link = "/" } = Astro.props;
 			href={link}
 			class="github-link"
 			aria-label="GitHub Repository"
+			target="_blank"
+			rel="noopener noreferrer"
 		>
 			<svg
 				aria-hidden="true"
@@ -89,7 +91,7 @@ const { title, description, tags, link = "/" } = Astro.props;
 
 	.title {
 		margin: 0;
-		font-size: 1.1rem;
+		font-size: 1.05rem;
 		font-weight: bold;
 		color: var(--color-text-primary);
 		letter-spacing: 0.5px;

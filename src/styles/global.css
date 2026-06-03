@@ -103,7 +103,7 @@ li a:hover {
 
 h1.page-title,
 h1.post-heading {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 	color: var(--color-text-main);
 	border-bottom: 1px solid var(--color-border);

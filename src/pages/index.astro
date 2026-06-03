@@ -10,14 +10,54 @@ import Socials from "../components/socials.astro";
 				<p>hey, i'm shivang.</p>
 				<p>here's my resume:</p>
 				<div class="resume-icon">
-					<a href="/resume.pdf">
-						<svg class="resume-svg" viewBox="0 0 24 24" display="inline-block" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="24" height="24" rx="6" fill="none" />
-							<g transform="translate(0,-0.8)">
-								<path d="M7 20C5.89543 20 5 19.1046 5 18V3H14L19 8V18C19 19.1046 18.1046 20 17 20H7Z" stroke="var(--color-text-muted)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M13 3V9H19" stroke="var(--color-text-muted)" stroke-width="1.3" stroke-linejoin="round" />
-								<path d="M9 13H15" stroke="var(--color-text-muted)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M9 16.5H15" stroke="var(--color-text-muted)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+					<a
+						href="/resume.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<svg
+							class="resume-svg"
+							viewBox="0 0 24 24"
+							display="inline-block"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect
+								width="24"
+								height="24"
+								rx="6"
+								fill="none"
+							></rect>
+							<g
+								transform="translate(0,-0.8)"
+							>
+								<path
+									d="M7 20C5.89543 20 5 19.1046 5 18V3H14L19 8V18C19 19.1046 18.1046 20 17 20H7Z"
+									stroke="var(--color-text-muted)"
+									stroke-width="1.3"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+								<path
+									d="M13 3V9H19"
+									stroke="var(--color-text-muted)"
+									stroke-width="1.3"
+									stroke-linejoin="round"
+								></path>
+								<path
+									d="M9 13H15"
+									stroke="var(--color-text-muted)"
+									stroke-width="1.3"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+								<path
+									d="M9 16.5H15"
+									stroke="var(--color-text-muted)"
+									stroke-width="1.3"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
 							</g>
 						</svg>
 					</a>
@@ -44,8 +84,11 @@ import Socials from "../components/socials.astro";
 				tooling.
 			</p>
 			<p>
-				i also write <a class="blog-link" href="/notes">technical blogs</a>
-				whenever i build something or stumble onto something worth sharing.
+				i also write <a class="blog-link" href="/notes"
+					>technical blogs</a
+				>
+				whenever i build something or stumble onto something
+				worth sharing.
 			</p>
 			<p>i mainly work with:</p>
 		</div>
@@ -55,14 +98,23 @@ import Socials from "../components/socials.astro";
 				if you want to collaborate, discuss ideas, or
 				just point out something i got wrong, feel free
 				to reach out:
-				<a class="email-link" href="mailto:hey@seivarya.in">hey@seivarya.in</a>
+				<a
+					class="email-link"
+					href="mailto:hey@seivarya.in"
+					>hey@seivarya.in</a
+				>
 			</p>
 			<p>
 				outside of programming, i'm probably playing
 				games, reading random blogs/books, or watching
 				something. i have a bunch of social links around
 				here somewhere, but i'm not active on most of
-				them. if you want a quick reply, <a class="discord-link" href="https://discord.com/users/1345276369566699530">discord</a>
+				them. if you want a quick reply, <a
+					class="discord-link"
+					href="https://discord.com/users/1345276369566699530"
+					target="_blank"
+					rel="noopener noreferrer">discord</a
+				>
 				is your best bet.
 			</p>
 		</div>
@@ -111,7 +163,11 @@ import Socials from "../components/socials.astro";
 	}
 	.contact-section .discord-link {
 		color: var(--color-brand-discord);
-		border-bottom-color: color-mix(in srgb, var(--color-brand-discord) 30%, transparent);
+		border-bottom-color: color-mix(
+			in srgb,
+			var(--color-brand-discord) 30%,
+			transparent
+		);
 	}
 
 	.contact-section a:hover,

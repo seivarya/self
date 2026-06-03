@@ -6,7 +6,7 @@
 	word-wrap: break-word;
 }
 
-/* Headings */
+
 .post-data h1,
 .post-data h2,
 .post-data h3,
@@ -30,27 +30,25 @@
 }
 
 .post-data h1 {
-	font-size: 1.3rem;
-}
-
-.post-data h2 {
 	font-size: 1.2rem;
 }
 
-.post-data h3 {
+.post-data h2 {
 	font-size: 1.12rem;
 }
 
-.post-data h4 {
+.post-data h3 {
 	font-size: 1.06rem;
 }
 
-/* Paragraphs */
+.post-data h4 {
+	font-size: 1.0rem;
+}
+
 .post-data p {
 	margin-bottom: 1.6em;
 }
 
-/* Links */
 .post-data a,
 .post-data a:visited,
 .post-data a:active {
@@ -70,7 +68,6 @@
 	border-bottom-color: var(--color-text-main);
 }
 
-/* Emphasized Text */
 .post-data strong {
 	color: var(--color-text-main);
 	font-weight: 400;
@@ -81,7 +78,7 @@
 	color: var(--color-text-italic);
 }
 
-/* Blockquotes */
+
 .post-data blockquote {
 	border-left: 2px solid var(--color-border);
 	margin: 1.5em 0;
@@ -91,7 +88,7 @@
 	background-color: transparent;
 }
 
-/* Inline Code */
+
 .post-data code {
 	background: var(--color-bg);
 	padding: 0.2em 0.4em;
@@ -101,7 +98,7 @@
 	font-family: "Source Code Pro", monospace;
 }
 
-/* Code Blocks */
+
 .post-data pre {
 	border: 2px solid var(--color-border);
 	border-radius: 8px;
@@ -120,14 +117,14 @@
 	font-size: 0.9em;
 }
 
-/* Thematic Break */
+
 .post-data hr {
 	border: none;
 	border-top: 1px solid var(--color-border);
 	margin: 2.5em 0;
 }
 
-/* Images & Diagrams */
+
 .post-data img {
 	max-width: 100%;
 	height: auto;
@@ -144,7 +141,6 @@
 	margin: 2em 0;
 }
 
-/* Lists */
 .post-data ul,
 .post-data ol {
 	margin-bottom: 1.2em;

@@ -27,3 +27,6 @@ dist/
 .env
 .env.local
 .dev.vars
+
+# files
+resume.pdf
