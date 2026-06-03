@@ -2,10 +2,10 @@
 title: the limitations of bump allocator
 date: 2025-12-26
 ---
-A while ago I made a simple bump allocator, built on top of `brk()` & `sbrk()`
-During this I found some constraints as to why this sort of "linear 
-allocation is a bad idea".
-### Bump Allocator's Mechanism
+A while ago I made a simple bump allocator, built on top of `brk()` & `sbrk()`.
+During this, I found some constraints as to why this sort of linear allocation can be problematic.
+
+## Bump Allocator Mechanism
 
 This sort of allocator starts off with a massive empty block and a single 
 pointer at the very beginning. Now, whenever user asks for 10 bytes it simply
@@ -66,7 +66,6 @@ can work but the flow will be:
 [allocate mem_x] --> [allocate mem_y] --> [free mem_x] --> [allocate mem_z] --> [free mem_y] --> [allocate mem_w] --> [free mem_z]
 ```
 
-### The Solution
+## The Arena Solution
 
-To fix this `sbrk()` issue, we can use *arena allocators*. I won't talk
-about arena allocators much, but on an abstract level instead of moving the break of the whole program, we allocate a very huge chunk of memory at once using `malloc` or `mmap` and then treat the block itself as a *"sandbox"*...
+To fix this `sbrk()` issue, we can use *arena allocators*. Instead of moving the heap break of the whole process directly, we allocate a large memory region at once using `malloc()` or `mmap()`, and then treat that block as a local *"sandbox"* arena for linear allocations.

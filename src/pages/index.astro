@@ -1,7 +1,6 @@
 ---
 import Home from "../layouts/home.astro";
 import Socials from "../components/socials.astro";
-import Webring from "../components/webring.astro";
 ---
 
 <Home>
@@ -11,7 +10,7 @@ import Webring from "../components/webring.astro";
 				<p>hey, i'm shivang.</p>
 				<p>here's my resume:</p>
 				<div class="resume-icon">
-					<a href="https://youtu.be/xvFZjo5PgG0?si=N-P7tgLqrPHinz34">
+					<a href="/resume.pdf">
 						<svg class="resume-svg" viewBox="0 0 24 24" display="inline-block" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect width="24" height="24" rx="6" fill="none" />
 							<g transform="translate(0,-0.8)">
@@ -68,9 +67,6 @@ import Webring from "../components/webring.astro";
 			</p>
 		</div>
 	</section>
-	<div class="webring-section">
-		<Webring />
-	</div>
 </Home>
 
 <style>
@@ -110,12 +106,12 @@ import Webring from "../components/webring.astro";
 		border-bottom: none;
 	}
 	.contact-section .email-link {
-		color: var(--color-text-primary);
-		border-bottom-color: rgba(255, 255, 255, 0.3);
+		color: var(--color-text-main);
+		border-bottom-color: var(--color-link-underline);
 	}
 	.contact-section .discord-link {
 		color: var(--color-brand-discord);
-		border-bottom-color: rgba(157, 166, 255, 0.3);
+		border-bottom-color: color-mix(in srgb, var(--color-brand-discord) 30%, transparent);
 	}
 
 	.contact-section a:hover,
@@ -123,7 +119,7 @@ import Webring from "../components/webring.astro";
 		opacity: 0.85;
 	}
 	.contact-section .email-link:hover {
-		border-bottom-color: rgba(255, 255, 255, 1);
+		border-bottom-color: var(--color-text-main);
 	}
 	.contact-section .discord-link:hover {
 		border-bottom-color: var(--color-brand-discord);

@@ -18,7 +18,8 @@ server gives a response -> done. Right? It's not incorrect but for the sake
 of learning we will assume the case in which our DNS doesn't know the IP of the target domain.
 
 Note: DNS servers only use domain name, they don't care about protocols.
-### From the Beginning
+
+## From the Beginning
 
 When we type `my.site.com`, first and foremost our system checks its
 *stub resolver* [an operating system component that performs DNS name resolutions for applications on the machine, also called as `DNS client`].
@@ -46,10 +47,12 @@ In a scenario that anyone anywhere visited this site through google then
 the IP can definitely be found into the DNS server because the DNS servers
 also have their own cache. (we are assuming that we didn't find our IP here as well and our recursive DNS lookup failed).
 
-DNS has hierarchy: on top of that hierarchy we have **root servers**.
-There are total 13 orgs with 13 server groups and few thousand servers 
-spread across the planet. Any domain no matter how deep or hidden it is, 
-can always be found in these servers but the root servers don't resolve 
+## DNS Hierarchy & Root Servers
+
+On top of the DNS hierarchy, we have **root servers**.
+There is a total of 13 organizations with 13 server groups and a few thousand servers 
+spread across the planet. Any domain, no matter how deep or hidden it is, 
+can always be found in these servers, but the root servers don't resolve 
 the domains they only function on **top level domains [TLDs]**. `.com, .net, .co`
 Are all examples of top level domain. These servers don't care about DNS 
 resolving. They have a list of DNS that handles the specific top level
@@ -68,12 +71,14 @@ those domains.
 
 Finally, Google DNS queries the authoritative name servers for the `site.com` zone, which return DNS records for `my.site.com` (such as A, AAAA, CNAME, or NXDOMAIN), after which the result is cached and returned to the stub resolver. But what's `my.` in our `my.site.com`?
 
-*Note*: The authoritative servers don't send IP address all the time. Sometimes it can be CNAME, A record, NXDOMAIN or something else.
+*Note*: The authoritative servers don't send IP addresses all the time. Sometimes it can be a CNAME, A record, NXDOMAIN, or something else.
 
-This portion is called a **subdomain**. It's something like a directory within
-a bigger domain you create multiple subdomains over the second level 
-domain and each domain will have different content and will point users to 
-different servers. Example: blog.my.site.com can host a blog,
+## Subdomains
+
+This portion is called a **subdomain**. It's similar to a directory within
+a larger domain. You can create multiple subdomains over the second-level 
+domain, and each subdomain can have different content and point users to 
+different servers. For example: `blog.my.site.com` can host a blog,
 shop.my.site.com can be for shopping products, portfolio.my.site.com can
 be self portfolio etc.
 
@@ -82,10 +87,12 @@ different IP address or even be hosted on a completely different server.
 Companies use subdomains to separate different parts of their website or 
 even for  staging/testing environments like dev.my.site.com
 
-By the way, this whole process is very very insecure... By default our 
-system's stub resolver sends requests at UDP \[User Datagram Protocol] port
-53, and it's not encrypted... Meaning, we can sniff the traffic and see what the
-user searches in its system! Or maybe we can block the response `8.8.8.8` 
+## DNS Security and Encryption
+
+By the way, this whole process is highly insecure by default. Our 
+system's stub resolver sends requests over UDP port 53 without encryption. 
+This means anyone can sniff the traffic and see which domains you query! 
+We could even intercept and block the response from `8.8.8.8` 
 sends and manipulate it such that we send another IP address of another 
 website and eventually hack the user. It's called DNS spoofing. Also, 
 similarly like malicious users our ISPs can also see the queries our stub

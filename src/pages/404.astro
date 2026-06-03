@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "@fontsource/source-code-pro";
 ---
 
 <!doctype html>
@@ -9,6 +10,20 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<title>404 - Not Found</title>
 		<meta name="theme-color" content="#0f0e1a" />
+		<script is:inline>
+			function applyTheme() {
+				const savedTheme = localStorage.getItem("theme");
+				if (savedTheme) {
+					document.documentElement.setAttribute("data-theme", savedTheme);
+					if (savedTheme === "light") {
+						document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#e1e2e7");
+					} else {
+						document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#13141f");
+					}
+				}
+			}
+			applyTheme();
+		</script>
 	</head>
 	<body>
 		<div class="error-container">

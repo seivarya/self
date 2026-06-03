@@ -22,11 +22,11 @@ const { pathname } = Astro.url;
 	</div>
 	<div class="nav-row">
 		<a
-			href="/writings"
-			class:list={[{ active: pathname.startsWith("/writings") }]}
-			data-astro-prefetch="hover"
+			href="/webring"
+			class:list={[{ active: pathname.startsWith("/webring") }]}
+			data-astro-prefetch="load"
 		>
-			writings
+		webring	
 		</a>
 		<a
 			href="/arts"

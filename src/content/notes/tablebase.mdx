@@ -15,23 +15,23 @@ And anyone above 2000 is basically a master or grandmaster. These are the big bo
 
 Now we know humans play chess, but so do computers. And they’re on a level humans can never reach not unless we learn how to sort trillions of possible moves in just a few seconds. To show you how strong computers are: the world’s best human player, "Magnus Carlsen", has an elo of around 2800. Impressive, right? Well, the world’s best chess engine, stockfish, has a peak performance of around 3700. And this is just when the engine is running locally. Add cloud scale compute, and you get performance approaching AlphaZero’s level.
 
-The **tablebase**.
+### What is a Tablebase?
 
-A **tablebase** is a mathematical idea that says _any position with 7 or fewer pieces on the board is a solvable state._  
+A **tablebase** is a mathematical database that says any position with 7 or fewer pieces on the board is a solvable state._  
 What does that mean? Looking at all those squares and pieces, you might’ve wondered how many total possibilities exist. Every single move creates a new **state**, and every move you _could’ve_ made also leads to a different possible **state**.
 
 Suppose you move your pawn one square that’s state x. If instead you move another pawn, that’s a totally different state y. And with each new state, the opponent’s options, possible moves, and tactics all change drastically.
 
 Now let’s use some basic permutations and combinations to estimate how many configurations are possible on a chessboard.
 
-#### Static Piece Arrangement
+### Static Piece Arrangement
 
 If we only care about how pieces are placed on the 64 squares, the count is limited. Each square can hold 12 possible pieces (6 for each color) or be empty.  
 So that’s 13⁶⁴. It looks insanely huge, but the number drops fast once we eliminate impossible or invalid configurations.  
 *Fun fact*: there are board setups you can _never_ reach in a real game — they’re invalid. You can create one on [lichess.org](https://lichess.org/editor) and play
 around with it.
 
-#### Dynamic Game State
+### Dynamic Game State
 
 Now, if we include extra information like whose turn it is, castling rights, en passant, move counters, and repetition history — the number of 
 probabilities spike up.  
@@ -41,6 +41,8 @@ Even though the set of possible **states** isn’t infinite, the number of possi
 Think about this. Suppose you move a pawn. That single move creates a new branch of possible **states**. Take it back and move a different pawn that’s another completely different branch.  
 You might say this just makes the number larger, not infinite, but here’s the twist:  
 each move creates a _new set_ of an insanely large number of states. Every move branches into new sets, and those branches can loop back, creating even more new sets from each loop. And that process never truly stops.
+
+## Chess Engine Depth and Branching
 
 That’s why chess engines have a concept of **depth**.  
 When you see an engine running at “depth 26” it means that the engine explores the game tree 26 levels deep (13 for each side) and then picks the best move for its side.  

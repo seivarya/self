@@ -43,7 +43,7 @@ A *client island* is an interactive component that is hydrated separately from t
 rest of the page, whereas, 
 *server islands* are rendered separately 
 
-#### Client Islands
+### Client Islands
 Astro renders every UI component to just html & css by default, and strips all the
 js automatically.
 
@@ -67,7 +67,7 @@ this implies that we can use different directives for different components.
 `client:visible` tells a component to load only once it enters the viewport.
 and so on.
 
-#### Server Islands
+### Server Islands
 
 These exist to move expensive/slow server side code out of the way of the main
 render process, this makes easy to combine high performance static HTML
@@ -89,7 +89,7 @@ also depends on the server config not just the *island*).
 The page displays fallback content instantly and shows the rendered content
 as soon as it's available.
 
-#### Finally Starting to Make Something
+## Finally Starting to Make Something
 
 So I initially thought I should follow the "blog tutorial" on docs but..
 *insert I don't think I will meme*
@@ -166,19 +166,19 @@ After this in my projects.astro page I just do
 ```js
 // mapping over a list of projects and rendering a component for each
 { 
-	projects.map(p => {(
+	projects.map(p => (
 	<BoxComponent 
 		title = { p.title }
 		description = { p.description }
 		tags = { p.tags }
 	 />
-	)})
+	))
 }
 ```
 
 And we're good to go.
 
-### Content Collections
+## Content Collections
 It's a method to manage sets of content in an Astro project.
 Like blog and stuff. These help organize and query the docs,
 enable intellisense and type checks.
@@ -219,7 +219,7 @@ export const collections = { notes: notesCollection };
 Or you can use custom build time loaders. I don't think I'll look into
 it for now. But I might migrate my `content/` To it later.
 
-##### Dynamic Content Loading
+### Dynamic Content Loading
 
 In dynamic content loading, you predefine a file in `pages/` route with file name `[slug].astro` where *slug* is the identifier (usually derived from the file name / path) of the content you've to render.  
 
@@ -319,7 +319,7 @@ Now don't get me wrong you can absolutely just do this using `.css`
 in the rendered section directly but this is a much cleaner / better  
 approach...
 
-#### `is:inline` Tag
+## `is:inline` Tag
 
 One thing that bothered me was the clock component in my header.  
 It worked very nicely sure but there was a small bug. Whenever the site's  
@@ -360,7 +360,7 @@ const blogs = defineCollection({
 })
 ```
 
-#### Using Custom Components in Astro
+## Using Custom Components in Astro
 
 There are two primary ways to do this.
 1. Create your own jsx components like we did in `pages/` and then import those components in `.mdx` file, use it and we're good to go.

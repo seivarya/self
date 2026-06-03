@@ -3,6 +3,16 @@
 ---
 
 <footer class="site-footer" transition:persist="site-footer">
+	<div class="footer-links">
+		<span>
+			<a href="https://github.com/seivarya/.site"
+				>source code</a
+			>
+		</span>
+		<span class="dot">-</span>
+		<a href="/sitemap-index.xml">sitemap</a>
+	</div>
+
 	<div class="footer-bottom">
 		<div class="loading-state">
 			loading
@@ -21,7 +31,6 @@
 		</div>
 	</div>
 </footer>
-
 <style>
 	.site-footer {
 		margin-top: auto;
@@ -29,7 +38,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 20px;
+		padding-top: 23px;
 		font-family: inherit;
 		font-size: 0.95rem;
 	}
@@ -37,6 +46,17 @@
 	@media (max-width: 600px) {
 		.site-footer {
 		}
+	}
+
+	.footer-links {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		color: var(--color-text-muted);
+	}
+
+	.footer-links span {
+		color: var(--color-text-muted);
 	}
 
 	a,
@@ -55,14 +75,6 @@
 	a:focus {
 		color: var(--color-text-hover);
 		border-bottom-color: var(--color-text-hover);
-	}
-
-	.copyright {
-		margin: 0;
-		display: flex;
-		align-items: center;
-		gap: 6px;
-		color: var(--color-text-muted);
 	}
 
 	.footer-bottom {
@@ -116,6 +128,6 @@
 	.source-code-section {
 		display: flex;
 		align-items: center;
-		color: var(--color-text-muted);
+		color: var(--color-loading);
 	}
 </style>

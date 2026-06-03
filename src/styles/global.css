@@ -27,6 +27,7 @@ html {
 	--color-brand-chess: #ffffff;
 	--color-brand-bluesky: #0085ff;
 	--color-link-underline: rgba(187, 154, 247, 0.3);
+	--color-selection: rgba(187, 154, 247, 0.25);
 }
 
 html[data-theme="light"] {
@@ -53,6 +54,7 @@ html[data-theme="light"] {
 	--color-brand-chess: #555555;
 	--color-brand-bluesky: #1185fe;
 	--color-link-underline: rgba(176, 106, 140, 0.3);
+	--color-selection: rgba(176, 106, 140, 0.22);
 }
 
 body {

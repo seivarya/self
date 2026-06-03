@@ -154,3 +154,22 @@
 .post-data li {
 	margin-bottom: 0.6em;
 }
+
+.post-data {
+	user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+}
+
+.post-data::selection {
+	background-color: var(--color-selection);
+}
+
+.post-data::-moz-selection {
+	background-color: var(--color-selection);
+}
+
+.post-data::-webkit-selection {
+	background-color: var(--color-selection);
+}
