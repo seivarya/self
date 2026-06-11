@@ -4,5 +4,21 @@
 		"global_fetch_strictly_public"
 	],
 	"name": "self",
-	"pages_build_output_dir": "dist"
+	"routes": [
+		{
+			"pattern": "seivarya.in/*",
+			"zone_name": "seivarya.in"
+		},
+		{
+			"pattern": "www.seivarya.in/*",
+			"zone_name": "seivarya.in"
+		}
+	],
+	"assets": {
+		"directory": "./dist",
+		"not_found_handling": "404-page"
+	},
+	"build": {
+		"command": "npm run build"
+	}
 }
