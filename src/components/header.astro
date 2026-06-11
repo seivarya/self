@@ -137,7 +137,7 @@ import Navigation from "./navigation.astro";
 			const currentTheme =
 				document.documentElement.getAttribute(
 					"data-theme",
-				) || "dark";
+				) || "light";
 			const newTheme =
 				currentTheme === "light" ? "dark" : "light";
 			document.documentElement.setAttribute(
@@ -152,8 +152,8 @@ import Navigation from "./navigation.astro";
 				metaThemeColor.setAttribute(
 					"content",
 					newTheme === "light"
-					? "#e1e2e7"
-					: "#0b0d0e",
+					? "#ffeef1"
+					: "#0f0e1a",
 				);
 			}
 		});

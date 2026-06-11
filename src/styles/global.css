@@ -31,30 +31,30 @@ html {
 }
 
 html[data-theme="light"] {
-	--color-bg: #fff8f8;
-	--color-bg-alt: #f8efef;
+	--color-bg: #ffeef1;
+	--color-bg-alt: #ffe3e7;
 
-	--color-text-main: #4f3d46;
-	--color-text-primary: #66515b;
-	--color-text-muted: #a08c95;
-	--color-text-hover: #3f3138;
-	--color-text-italic: #b06a8c;
+	--color-text-main: #54313f;
+	--color-text-primary: #7d5366;
+	--color-text-muted: #a88091;
+	--color-text-hover: #3d1d2b;
+	--color-text-italic: #c25983;
 
-	--color-border: #ead7de;
+	--color-border: #ffd2db;
 
-	--color-tech-stack: #9f8792;
-	--color-tech-stack-span: #5d4953;
-	--color-loading: #4f3d46;
+	--color-tech-stack: #a88091;
+	--color-tech-stack-span: #7d5366;
+	--color-loading: #54313f;
 
-	--color-brand-github: #181717;
+	--color-brand-github: #2f1922;
 	--color-brand-twitter: #1da1f2;
 	--color-brand-linkedin: #0a66c2;
 	--color-brand-telegram: #229ed9;
 	--color-brand-discord: #5865f2;
-	--color-brand-chess: #555555;
+	--color-brand-chess: #6b4c59;
 	--color-brand-bluesky: #1185fe;
-	--color-link-underline: rgba(176, 106, 140, 0.3);
-	--color-selection: rgba(176, 106, 140, 0.22);
+	--color-link-underline: rgba(194, 89, 131, 0.35);
+	--color-selection: rgba(194, 89, 131, 0.22);
 }
 
 body {

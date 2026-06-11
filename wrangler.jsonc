@@ -4,29 +4,5 @@
 		"global_fetch_strictly_public"
 	],
 	"name": "self",
-	"main": "@astrojs/cloudflare/entrypoints/server",
-	"routes": [
-		{
-			"pattern": "seivarya.in/*",
-			"zone_name": "seivarya.in"
-		},
-		{
-			"pattern": "www.seivarya.in/*",
-			"zone_name": "seivarya.in"
-		}
-	],
-	"assets": {
-		"directory": "./dist",
-		"binding": "ASSETS",
-		"not_found_handling": "404-page"
-	},
-	"observability": {
-		"enabled": true
-	},
-	"kv_namespaces": [
-		{
-			"binding": "SESSION",
-			"id": "d777963cbced42ea97a0373fc0320a25"
-		}
-	]
+	"pages_build_output_dir": "dist"
 }

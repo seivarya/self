@@ -4,11 +4,26 @@ import Artbox from "../components/artbox.astro";
 
 // art imports
 import devilman from "../content/arts/devilman_crybaby.png";
+import titan from "../content/arts/attack_on_titan.png";
+import ylia from "../content/arts/ylia.png";
+import angel from "../content/arts/angel_of_death.png";
 
 const images = [
 	{
-		title: "miki makimura from devilman crybaby",
+		title: "from devilman crybaby",
 		link: devilman.src,
+	},
+	{
+		title: "from attack on titan",
+		link: titan.src,
+	},
+	{
+		title: "from your lie in april",
+		link: ylia.src,
+	},
+	{
+		title: "from angels of death",
+		link: angel.src,
 	},
 ];
 ---
@@ -43,5 +58,7 @@ const images = [
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+		gap: 50px;
+		padding-bottom: 75px;
 	}
 </style>

@@ -1,1 +1,12 @@
-* text eol=lf
+* text=auto eol=lf
+
+*.jpg  -text
+*.jpeg -text
+*.png  -text
+*.webp -text
+*.gif  -text
+*.ico  -text
+*.pdf  -text
+*.woff -text
+*.woff2 -text
+*.ttf  -text

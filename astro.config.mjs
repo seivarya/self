@@ -1,10 +1,7 @@
 // @ts-check
 import { defineConfig, fontProviders } from "astro/config";
 import mdx from "@astrojs/mdx";
-
 import sitemap from "@astrojs/sitemap";
-
-import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,14 +11,15 @@ export default defineConfig({
 
     markdown: {
         shikiConfig: {
-            theme: "catppuccin-macchiato",
+            themes: {
+                light: "catppuccin-latte",
+                dark: "catppuccin-macchiato",
+            },
         },
     },
     vite: {
         build: {},
     },
-
-    adapter: cloudflare(),
     prefetch: true,
     output: "static",
     devToolbar: {
