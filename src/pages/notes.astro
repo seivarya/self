@@ -26,12 +26,7 @@ const posts = objects.sort(compareFn);
 	<div class="list-container">
 		{
 			posts.map((post) => (
-				<Cleanindex
-					title={post.data.title}
-					date={post.data.date}
-					slug={post.id}
-					collection="notes"
-				/>
+				<Cleanindex title={post.data.title} date={post.data.date} slug={post.id} collection="notes" />
 			))
 		}
 	</div>

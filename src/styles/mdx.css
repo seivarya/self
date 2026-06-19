@@ -6,7 +6,6 @@
 	word-wrap: break-word;
 }
 
-
 .post-data h1,
 .post-data h2,
 .post-data h3,
@@ -42,7 +41,7 @@
 }
 
 .post-data h4 {
-	font-size: 1.0rem;
+	font-size: 1rem;
 }
 
 .post-data p {
@@ -78,7 +77,6 @@
 	color: var(--color-text-italic);
 }
 
-
 .post-data blockquote {
 	border-left: 2px solid var(--color-border);
 	margin: 1.5em 0;
@@ -88,7 +86,6 @@
 	background-color: transparent;
 }
 
-
 .post-data code {
 	background: var(--color-bg);
 	padding: 0.2em 0.4em;
@@ -97,7 +94,6 @@
 	color: var(--color-text-main);
 	font-family: "Source Code Pro", monospace;
 }
-
 
 .post-data pre {
 	background-color: var(--color-bg-alt) !important;
@@ -118,13 +114,11 @@
 	font-size: 0.9em;
 }
 
-
 .post-data hr {
 	border: none;
 	border-top: 1px solid var(--color-border);
 	margin: 2.5em 0;
 }
-
 
 .post-data img {
 	max-width: 100%;
@@ -172,10 +166,10 @@
 }
 
 /* dark theme overrides for shiki code blocks */
-html[data-theme='dark'] .astro-code,
-html[data-theme='dark'] .astro-code span {
-  color: var(--shiki-dark) !important;
-  font-style: var(--shiki-dark-font-style) !important;
-  font-weight: var(--shiki-dark-font-weight) !important;
-  text-decoration: var(--shiki-dark-text-decoration) !important;
+html[data-theme="dark"] .astro-code,
+html[data-theme="dark"] .astro-code span {
+	color: var(--shiki-dark) !important;
+	font-style: var(--shiki-dark-font-style) !important;
+	font-weight: var(--shiki-dark-font-weight) !important;
+	text-decoration: var(--shiki-dark-text-decoration) !important;
 }

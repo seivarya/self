@@ -1,22 +1,15 @@
 ---
-
+import Webring from "./webring.astro";
 ---
 
 <footer class="site-footer" transition:persist="site-footer">
+	<Webring />
 	<div class="footer-links">
 		<span>
-			<a
-				href="https://github.com/seivarya/sitey"
-				target="_blank"
-				rel="noopener noreferrer">source code</a
-			>
+			<a href="https://github.com/seivarya/sitey" target="_blank" rel="noopener noreferrer">source code</a>
 		</span>
 		<span class="dot">-</span>
-		<a
-			href="/sitemap-index.xml"
-			target="_blank"
-			rel="noopener noreferrer">sitemap</a
-		>
+		<a href="/sitemap-index.xml" target="_blank" rel="noopener noreferrer">sitemap</a>
 	</div>
 
 	<div class="footer-bottom">
@@ -30,11 +23,7 @@
 		</div>
 		<div class="source-code-section">
 			<span>
-				<a
-					href="https://astro.build/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<a href="https://astro.build/" target="_blank" rel="noopener noreferrer">
 					built with astro
 				</a>
 			</span>
@@ -51,11 +40,6 @@
 		padding-top: 23px;
 		font-family: inherit;
 		font-size: 0.95rem;
-	}
-
-	@media (max-width: 600px) {
-		.site-footer {
-		}
 	}
 
 	.footer-links {

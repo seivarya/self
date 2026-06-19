@@ -5,36 +5,11 @@ const { pathname } = Astro.url;
 <nav class="nav-bar">
 	<div class="nav-row">
 		<a href="/" class:list={[{ active: pathname === "/" }]}>home</a>
-		<a
-			href="/projects"
-			class:list={[{ active: pathname.startsWith("/projects") }]}
-			data-astro-prefetch="hover"
-		>
-			projects
-		</a>
-		<a
-			href="/notes"
-			class:list={[{ active: pathname.startsWith("/notes") }]}
-			data-astro-prefetch="hover"
-		>
-			notes
-		</a>
+		<a href="/projects" class:list={[{ active: pathname.startsWith("/projects") }]} data-astro-prefetch="hover">projects</a>
+		<a href="/notes" class:list={[{ active: pathname.startsWith("/notes") }]} data-astro-prefetch="hover">notes</a>
 	</div>
 	<div class="nav-row">
-		<a
-			href="/webring"
-			class:list={[{ active: pathname.startsWith("/webring") }]}
-			data-astro-prefetch="load"
-		>
-		webring	
-		</a>
-		<a
-			href="/arts"
-			class:list={[{ active: pathname.startsWith("/arts") }]}
-			data-astro-prefetch="hover"
-		>
-			arts
-		</a>
+		<a href="/arts" class:list={[{ active: pathname.startsWith("/arts") }]} data-astro-prefetch="hover">arts</a>
 	</div>
 </nav>
 
@@ -63,7 +38,7 @@ const { pathname } = Astro.url;
 		padding-bottom: 2px;
 		transition:
 			color 0.25s ease,
-		border-bottom-color 0.25s ease;
+			border-bottom-color 0.25s ease;
 	}
 
 	.nav-bar a:hover,

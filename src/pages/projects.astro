@@ -75,12 +75,7 @@ const projects = [
 	<div class="projects-grid">
 		{
 			projects.map((p) => (
-				<Projectbox
-					title={p.title}
-					description={p.description}
-					tags={p.tags}
-					link={p.link}
-				/>
+				<Projectbox title={p.title} description={p.description} tags={p.tags} link={p.link} />
 			))
 		}
 	</div>

@@ -31,30 +31,30 @@ html {
 }
 
 html[data-theme="light"] {
-	--color-bg: #ffeef1;
-	--color-bg-alt: #ffe3e7;
+	--color-bg: #fff0f3;
+	--color-bg-alt: #ffe8ed;
 
-	--color-text-main: #54313f;
-	--color-text-primary: #7d5366;
-	--color-text-muted: #a88091;
-	--color-text-hover: #3d1d2b;
-	--color-text-italic: #c25983;
+	--color-text-main: #5c3a48;
+	--color-text-primary: #896274;
+	--color-text-muted: #b8929f;
+	--color-text-hover: #4a2535;
+	--color-text-italic: #d46a94;
 
-	--color-border: #ffd2db;
+	--color-border: #fdd5de;
 
-	--color-tech-stack: #a88091;
-	--color-tech-stack-span: #7d5366;
-	--color-loading: #54313f;
+	--color-tech-stack: #b8929f;
+	--color-tech-stack-span: #896274;
+	--color-loading: #5c3a48;
 
-	--color-brand-github: #2f1922;
+	--color-brand-github: #3d2230;
 	--color-brand-twitter: #1da1f2;
 	--color-brand-linkedin: #0a66c2;
 	--color-brand-telegram: #229ed9;
 	--color-brand-discord: #5865f2;
-	--color-brand-chess: #6b4c59;
+	--color-brand-chess: #7a5565;
 	--color-brand-bluesky: #1185fe;
-	--color-link-underline: rgba(194, 89, 131, 0.35);
-	--color-selection: rgba(194, 89, 131, 0.22);
+	--color-link-underline: rgba(212, 106, 148, 0.3);
+	--color-selection: rgba(212, 106, 148, 0.2);
 }
 
 body {
@@ -64,12 +64,15 @@ body {
 	background-color: var(--color-bg);
 	color: var(--color-text-primary);
 	font-family: "Source Code Pro" !important;
-	font-weight: 100;
+	font-weight: 300;
+}
 
-	user-select: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
+::selection {
+	background-color: var(--color-selection);
+}
+
+::-moz-selection {
+	background-color: var(--color-selection);
 }
 
 a {

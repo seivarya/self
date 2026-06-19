@@ -1,0 +1,96 @@
+<div class="main-container">
+	<div class="webring-container">
+		<a
+			class="webring-link"
+			href="https://ring.seggs.lol/redirect?from=seivarya&dir=prev"
+			>previous</a
+		>
+		<span class="separator">-</span>
+		<a
+			class="webring-title-link"
+			href="https://ring.seggs.lol/random"
+		>
+			<p class="webring-title-1">thread</p>
+			<p class="webring-title-2">locked</p>
+		</a>
+		<span class="separator">-</span>
+		<a
+			class="webring-link"
+			href="https://ring.seggs.lol/redirect?from=seivarya&dir=next"
+			>next</a
+		>
+	</div>
+</div>
+
+<style>
+	.main-container {
+		display: flex;
+		width: 100%;
+		padding: 12px 0;
+		margin: 0;
+		margin-bottom: 14px;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.webring-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		gap: 12px;
+		font-size: 0.9rem;
+	}
+
+	.webring-container a {
+		text-decoration: none;
+		border-bottom: 1px solid var(--color-border);
+		transition:
+			color 0.25s ease,
+			border-bottom-color 0.25s ease;
+	}
+
+	.webring-container a:hover {
+		border-bottom-color: var(--color-text-hover);
+	}
+
+	.webring-link {
+		color: var(--color-text-muted);
+	}
+
+	.webring-link:hover {
+		color: var(--color-text-hover);
+	}
+
+	.separator {
+		color: var(--color-text-muted);
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.webring-title-link {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.webring-title-1,
+	.webring-title-2 {
+		margin: 0;
+		letter-spacing: 0.5px;
+		transition: color 0.25s ease;
+	}
+
+	.webring-title-1 {
+		color: var(--color-text-muted);
+	}
+
+	.webring-title-2 {
+		color: var(--color-text-primary);
+	}
+
+	.webring-title-link:hover .webring-title-1,
+	.webring-title-link:hover .webring-title-2 {
+		color: var(--color-text-hover);
+	}
+</style>

@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "@fontsource/source-code-pro";
+import ThemeScript from "../components/theme.astro";
 ---
 
 <!doctype html>
@@ -9,28 +10,8 @@ import "@fontsource/source-code-pro";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>404 - Not Found</title>
-		<meta name="theme-color" content="#ffeef1" />
-		<script is:inline>
-			function applyTheme() {
-				const savedTheme =
-					localStorage.getItem("theme") ||
-					"light";
-				document.documentElement.setAttribute(
-					"data-theme",
-					savedTheme,
-				);
-				if (savedTheme === "light") {
-					document.querySelector(
-						'meta[name="theme-color"]',
-					)?.setAttribute("content", "#ffeef1");
-				} else {
-					document.querySelector(
-						'meta[name="theme-color"]',
-					)?.setAttribute("content", "#0f0e1a");
-				}
-			}
-			applyTheme();
-		</script>
+		<meta name="theme-color" content="#0f0e1a" />
+		<ThemeScript />
 	</head>
 	<body>
 		<div class="error-container">

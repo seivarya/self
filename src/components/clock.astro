@@ -18,25 +18,16 @@
 </style>
 <script is:inline>
 	function clockTime() {
-		const now = new Date();
+		var timeDisplay = document.getElementById("current-time");
+		if (!timeDisplay) return;
 
-		const seconds = now.getSeconds();
-		const minutes = now.getMinutes();
-		const hours = now.getHours();
-
-		const timeDisplay = document.getElementById("current-time");
-		const gmtDisplay = document.getElementById("gmt");
-		if (!timeDisplay || !gmtDisplay) {
-			console.log("not found");
-			return;
-		}
-
-		timeDisplay.textContent =
-			("0" + hours).slice(-2) +
-			":" +
-			("0" + minutes).slice(-2) +
-			":" +
-			("0" + seconds).slice(-2);
+		timeDisplay.textContent = new Date().toLocaleTimeString("en-GB", {
+			timeZone: "Asia/Kolkata",
+			hour: "2-digit",
+			minute: "2-digit",
+			second: "2-digit",
+			hour12: false,
+		});
 	}
 	clockTime();
 	setInterval(clockTime, 1000);

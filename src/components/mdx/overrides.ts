@@ -5,5 +5,5 @@
 import Link from "./hyprlink.astro";
 
 export const mdxOverrides = {
-	a: Link
+	a: Link,
 };
