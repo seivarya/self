@@ -94,8 +94,8 @@ li a {
 	border-bottom: 1px solid var(--color-link-underline);
 	padding-bottom: 1px;
 	transition:
-		border-bottom-color 0.25s ease,
-		opacity 0.25s ease;
+	border-bottom-color 0.25s ease,
+	opacity 0.25s ease;
 }
 
 p a:hover,

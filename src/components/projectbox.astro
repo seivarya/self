@@ -1,9 +1,9 @@
 ---
 interface Props {
-	title: string;
-	description: string;
-	tags: string[];
-	link?: string;
+title: string;
+description: string;
+tags: string[];
+link?: string;
 }
 
 const { title, description, tags, link = "/" } = Astro.props;
@@ -34,7 +34,7 @@ const { title, description, tags, link = "/" } = Astro.props;
 		background-color: transparent;
 		transition:
 			border-color 0.2s ease,
-			opacity 0.2s ease;
+		opacity 0.2s ease;
 		cursor: default;
 	}
 
@@ -62,7 +62,7 @@ const { title, description, tags, link = "/" } = Astro.props;
 		color: var(--color-text-muted);
 		transition:
 			color 0.2s ease,
-			transform 0.2s ease;
+		transform 0.2s ease;
 		cursor: pointer;
 	}
 
