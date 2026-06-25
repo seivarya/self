@@ -10,3 +10,4 @@
 *.woff -text
 *.woff2 -text
 *.ttf  -text
+*.svg -text
