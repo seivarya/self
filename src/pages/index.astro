@@ -1,6 +1,8 @@
 ---
 import Home from "../layouts/home.astro";
-import Socials from "../components/socials.astro";
+import Socials from "../components/ui/socials.astro";
+import ResumeIcon from "../components/icons/resume.astro";
+import DiscordIcon from "../components/icons/discord.astro";
 ---
 
 <Home>
@@ -11,15 +13,7 @@ import Socials from "../components/socials.astro";
 				<p>here's my resume:</p>
 				<div class="resume-icon">
 					<a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-						<svg class="resume-svg" viewBox="0 0 24 24" display="inline-block" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="24" height="24" rx="6" fill="none"></rect>
-							<g transform="translate(0,-0.8)">
-							<path d="M7 20C5.89543 20 5 19.1046 5 18V3H14L19 8V18C19 19.1046 18.1046 20 17 20H7Z" stroke="var(--color-text-muted)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M13 3V9H19" stroke="var(--color-text-muted)" stroke-width="1.3" stroke-linejoin="round"></path>
-							<path d="M9 13H15" stroke="var(--color-text-muted)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M9 16.5H15" stroke="var(--color-text-muted)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
-							</g>
-						</svg>
+						<ResumeIcon />
 					</a>
 				</div>
 			</div>
@@ -45,9 +39,8 @@ import Socials from "../components/socials.astro";
 			</p>
 			<p>
 			i also write <a class="blog-link" href="/notes"
-				>technical blogs</a
-			>
-			whenever i build something or stumble onto something
+							  >technical blogs</a><span> </span>
+			 whenever i build something or stumble onto something
 			worth sharing.
 			</p>
 		</div>
@@ -56,79 +49,20 @@ import Socials from "../components/socials.astro";
 			<p>
 			if you want to collaborate, discuss ideas, or
 			just point out something i got wrong, feel free
-			to reach out:
+			to reach out:<span> </span>
 			<a class="email-link" href="mailto:hey@seivarya.in">hey@seivarya.in</a>
 			</p>
 			<p>
-			outside of programming, i'm probably playing
-			games, reading random blogs/books, or watching
-			something. i have a bunch of social links around
+			outside of programming, i'm probably reading random blogs/books,
+			watching <span class="tsoding-link"><a href="https://www.youtube.com/tsoding">tsoding</a></span> or 
+			something else. i have a bunch of social links around
 			here somewhere, but i'm not active on most of
-			them. if you want a quick reply, <span class="discord-row"><a class="discord-link" href="https://discord.com/users/1345276369566699530" target="_blank" rel="noopener noreferrer">discord</a><span class="icon discord-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 44" fill="none"><path d="M33.5799 8C33.219 8.64088 32.8948 9.30387 32.6002 9.98158C29.8009 9.56169 26.9501 9.56169 24.1434 9.98158C23.8562 9.30387 23.5247 8.64088 23.1637 8C20.5339 8.44936 17.9703 9.23757 15.5394 10.3499C10.7217 17.488 9.41785 24.442 10.0661 31.3002C12.8875 33.3849 16.0477 34.9761 19.4142 35.9926C20.1729 34.9761 20.8433 33.8932 21.4179 32.7661C20.3276 32.361 19.2742 31.8527 18.265 31.2634C18.5302 31.0718 18.788 30.8729 19.0385 30.6814C24.9538 33.4659 31.8046 33.4659 37.7272 30.6814C37.9777 30.8877 38.2355 31.0866 38.5007 31.2634C37.4915 31.86 36.4381 32.361 35.3405 32.7735C35.9151 33.9006 36.5854 34.9834 37.3442 36C40.7107 34.9834 43.8709 33.3996 46.6923 31.3149C47.4584 23.3591 45.381 16.4641 41.2042 10.3573C38.7807 9.24494 36.2171 8.45672 33.5873 8.01473L33.5799 8ZM22.2429 27.0792C20.4234 27.0792 18.9132 25.4291 18.9132 23.3886C18.9132 21.3481 20.3644 19.6906 22.2355 19.6906C24.1066 19.6906 25.5946 21.3554 25.5652 23.3886C25.5357 25.4217 24.0993 27.0792 22.2429 27.0792ZM34.5155 27.0792C32.6886 27.0792 31.1932 25.4291 31.1932 23.3886C31.1932 21.3481 32.6444 19.6906 34.5155 19.6906C36.3865 19.6906 37.8672 21.3554 37.8377 23.3886C37.8083 25.4217 36.3718 27.0792 34.5155 27.0792Z" fill="currentColor"></path></svg></span></span> is your best bet.
+			them. if you want a quick reply, <span class="discord-row"><a class="discord-link" href="https://discord.com/users/1345276369566699530" target="_blank" rel="noopener noreferrer">discord</a><span class="icon discord-container"><DiscordIcon /></span></span> is your best bet.
 			</p>
 		</div>
 	</section>
 </Home>
-
 <style>
-	.contact-section {
-		margin-bottom: 20px;
-	}
-
-	@media (max-width: 600px) {
-		.contact-section {
-			margin-bottom: 10px;
-		}
-
-		.resume-icon {
-			width: 16px;
-			height: 16px;
-			padding-top: 0px;
-			transform: translateY(-1.9px) scale(0.94);
-		}
-	}
-	a {
-		color: unset;
-	}
-	.contact-section a,
-	.contact-section a:visited,
-	.contact-section a:active {
-		text-decoration: none;
-		border-bottom: 1px solid transparent;
-		padding-bottom: 1px;
-		font-weight: 500;
-		transition:
-			border-bottom-color 0.25s ease,
-		opacity 0.25s ease;
-	}
-
-	.contact-section .friend-link {
-		color: var(--color-text-primary);
-		border-bottom: none;
-	}
-	.contact-section .email-link {
-		color: var(--color-text-main);
-		border-bottom-color: var(--color-link-underline);
-	}
-	.contact-section .discord-link {
-		color: var(--color-brand-discord);
-		border-bottom-color: color-mix(
-			in srgb,
-			var(--color-brand-discord) 30%,
-			transparent
-				);
-	}
-
-	.contact-section a:hover,
-	.contact-section a:focus {
-		opacity: 0.85;
-	}
-	.contact-section .email-link:hover {
-		border-bottom-color: var(--color-text-main);
-	}
-	.contact-section .discord-link:hover {
-		border-bottom-color: var(--color-brand-discord);
-	}
 	.about-section {
 		margin: auto;
 		display: flex;
@@ -144,15 +78,31 @@ import Socials from "../components/socials.astro";
 		width: 100%;
 		margin-bottom: 0px;
 	}
+
+	.contact-section {
+		margin-bottom: 20px;
+	}
+
+	@media (max-width: 600px) {
+		.contact-section {
+			margin-bottom: 10px;
+		}
+	}
+
+	.intro-section p,
+	.contact-section p {
+		margin: 0 0 15px 0;
+	}
+
+	.contact-section p:last-child {
+		margin-bottom: 0;
+	}
+
 	.intro-w-resume {
 		display: flex;
 		gap: 10px;
 	}
-	.resume-svg {
-		width: 100%;
-		height: 100%;
-		display: block;
-	}
+
 	.resume-icon {
 		padding-top: 1.7px;
 		width: 24px;
@@ -164,12 +114,19 @@ import Socials from "../components/socials.astro";
 		transform: scale(1.1);
 	}
 
-	.intro-section p,
-	.contact-section p {
-		margin: 0 0 15px 0;
+	.resume-svg {
+		width: 100%;
+		height: 100%;
+		display: block;
 	}
-	.contact-section p:last-child {
-		margin-bottom: 0;
+
+	@media (max-width: 600px) {
+		.resume-icon {
+			width: 16px;
+			height: 16px;
+			padding-top: 0px;
+			transform: translateY(-1.9px) scale(0.94);
+		}
 	}
 
 	.socials-row {
@@ -182,9 +139,75 @@ import Socials from "../components/socials.astro";
 	}
 
 	.socials-label {
-		color: var(--color-text-muted);
+		color: var(--color-text-main);
 		white-space: nowrap;
-		font-size: 0.9rem;
+	}
+
+	a {
+		color: unset;
+	}
+
+	.contact-section a,
+	.contact-section a:visited,
+	.contact-section a:active,
+	.tsoding-link,
+	.tsoding-link:visited,
+	.tsoding-link:active {
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		padding-bottom: 1px;
+		font-weight: 500;
+		opacity: 0.85;
+		transition:
+			border-bottom-color 0.25s ease,
+			opacity 0.25s ease;
+	}
+
+	.contact-section a:hover,
+	.contact-section a:focus,
+	.tsoding-link:hover,
+	.tsoding-link:focus {
+		opacity: 1;
+	}
+
+	.contact-section .email-link {
+		color: var(--color-text-main);
+		border-bottom-color: var(--color-link-underline);
+	}
+
+	.contact-section .email-link:hover {
+		border-bottom-color: var(--color-text-main);
+	}
+
+	.tsoding-link {
+		color: var(--color-text-main);
+		border-bottom-color: var(--color-link-underline);
+	}
+
+	.tsoding-link:hover {
+		border-bottom-color: var(--color-text-main);
+	}
+
+	.contact-section .discord-link {
+		color: var(--color-brand-discord);
+		border-bottom-color: color-mix(
+			in srgb,
+			var(--color-brand-discord) 30%,
+			transparent
+		);
+	}
+
+	.contact-section .discord-link:hover {
+		border-bottom-color: var(--color-brand-discord);
+	}
+
+	.discord-row {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 6px;
+		vertical-align: middle;
+		white-space: nowrap;
 	}
 
 	.icon {
@@ -198,27 +221,19 @@ import Socials from "../components/socials.astro";
 		transition: all 0.25s ease;
 	}
 
-	.discord-container svg {
-		object-fit: contain;
-		transform: scale(1.6);
-	}
-
 	.icon svg {
 		width: 28px;
 		height: 28px;
 		fill: currentColor;
 	}
+
 	.discord-container {
 		color: var(--color-brand-discord);
 	}
 
-	.discord-row {
-		display: inline-flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 6px;
-		vertical-align: middle;
-		white-space: nowrap;
+	.discord-container svg {
+		object-fit: contain;
+		transform: scale(1.6);
 	}
-
 </style>
+

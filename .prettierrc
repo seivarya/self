@@ -1,7 +1,7 @@
 {
 	"useTabs": true,
 	"tabWidth": 8,
-	"printWidth": 200,
+	"printWidth": 500,
 	"bracketSameLine": true,
 	"singleAttributePerLine": false,
 	"plugins": ["prettier-plugin-astro"]

@@ -1,0 +1,130 @@
+---
+import GithubIcon from "../icons/github.astro";
+import TwitterIcon from "../icons/twitter.astro";
+import TelegramIcon from "../icons/telegram.astro";
+import LinkedinIcon from "../icons/linkedin.astro";
+import ChessIcon from "../icons/chess.astro";
+import BlueskyIcon from "../icons/bluesky.astro";
+
+const twitter = "https://x.com/seivarya";
+const telegram = "https://t.me/seivarya";
+const github = "https://github.com/seivarya";
+const linkedin = "https://www.linkedin.com/in/seivarya/";
+const bluesky = "https://bsky.app/profile/seivarya.bsky.social";
+const chess = "https://www.chess.com/member/seivarya";
+---
+
+<div class="main-container">
+	<div class="icons-container">
+		<a href={github} target="_blank" rel="noopener noreferrer">
+			<div class="icon github-container">
+				<GithubIcon />
+			</div>
+		</a>
+
+		<a href={twitter} target="_blank" rel="noopener noreferrer">
+			<div class="icon twitter-container">
+				<TwitterIcon />
+			</div>
+		</a>
+
+		<a href={telegram} target="_blank" rel="noopener noreferrer">
+			<div class="icon telegram-container">
+				<TelegramIcon />
+			</div>
+		</a>
+
+		<a href={linkedin} target="_blank" rel="noopener noreferrer">
+			<div class="icon linkedin-container">
+				<LinkedinIcon />
+			</div>
+		</a>
+
+		<a href={chess} target="_blank" rel="noopener noreferrer">
+			<div class="icon chess-container">
+				<ChessIcon />
+			</div>
+		</a>
+
+		<a href={bluesky} target="_blank" rel="noopener noreferrer">
+			<div class="icon bluesky-container">
+				<BlueskyIcon />
+			</div>
+		</a>
+	</div>
+</div>
+
+<style>
+	.main-container {
+		display: contents;
+	}
+
+	a {
+		color: unset;
+		text-decoration: none;
+	}
+
+	.icons-container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.icon {
+		display: flex;
+		height: 24px;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-text-muted);
+		cursor: pointer;
+		transition:
+			color 0.25s ease,
+		transform 0.25s ease;
+	}
+
+	.icon svg {
+		width: 19px;
+		height: 19px;
+		fill: currentColor;
+	}
+	.linkedin-container svg path {
+		fill: var(--color-brand-linkedin);
+	}
+	.icon:hover {
+		transform: scale(1.1);
+	}
+
+	.github-container {
+		color: var(--color-brand-github);
+	}
+	.twitter-container {
+		color: var(--color-brand-twitter);
+	}
+	.linkedin-container {
+		color: var(--color-brand-linkedin);
+	}
+	.telegram-container {
+		color: var(--color-brand-telegram);
+	}
+	.chess-container {
+		color: var(--color-brand-chess);
+	}
+	.bluesky-container {
+		color: var(--color-brand-bluesky);
+	}
+
+	@media (max-width: 768px) {
+		.icon {
+			height: 20px;
+		}
+		.icon svg {
+			width: 16px;
+			height: 16px;
+		}
+		.bluesky-container,
+		.chess-container {
+			display: none;
+		}
+	}
+</style>

@@ -2,7 +2,7 @@ html {
 	overflow-y: scroll;
 	background-color: var(--color-bg);
 	color: var(--color-text-primary);
-	font-size: 15px;
+	font-size: 14.5px;
 }
 
 :root {
@@ -65,15 +65,15 @@ body {
 	color: var(--color-text-primary);
 	font-family: "Source Code Pro" !important;
 	font-weight: 300;
+
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
 }
 
-::selection {
-	background-color: var(--color-selection);
-}
 
-::-moz-selection {
-	background-color: var(--color-selection);
-}
 
 a {
 	cursor: pointer;
@@ -83,7 +83,7 @@ a {
 
 @media (max-width: 768px) {
 	html {
-		font-size: 12.5px;
+		font-size: 12px;
 	}
 }
 
@@ -93,14 +93,15 @@ li a {
 	text-decoration: none;
 	border-bottom: 1px solid var(--color-link-underline);
 	padding-bottom: 1px;
+	opacity: 0.85;
 	transition:
-	border-bottom-color 0.25s ease,
-	opacity 0.25s ease;
+		border-bottom-color 0.25s ease,
+		opacity 0.25s ease;
 }
 
 p a:hover,
 li a:hover {
-	opacity: 0.85;
+	opacity: 1;
 	border-bottom-color: var(--color-text-main);
 }
 
