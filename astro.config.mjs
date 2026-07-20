@@ -5,24 +5,28 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://seivarya.in",
-	integrations: [// theme isn't req. for now ig
-		mdx(), sitemap()],
+  site: "https://seivarya.in",
 
-	markdown: {
-		shikiConfig: {
-			themes: {
-				light: "catppuccin-latte",
-				dark: "catppuccin-macchiato",
-			},
-		},
+  integrations: [
+      mdx(), sitemap()],
+
+  markdown: {
+      shikiConfig: {
+          themes: {
+              light: "catppuccin-latte",
+              dark: "catppuccin-macchiato",
+          },
+      },
 	},
-	vite: {
-		build: {},
+
+  vite: {
+      build: {},
 	},
-	prefetch: true,
-	output: "static",
-	devToolbar: {
-		enabled: false
+
+  prefetch: true,
+  output: "static",
+
+  devToolbar: {
+      enabled: false
 	}
 });

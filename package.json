@@ -27,9 +27,6 @@
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "typescript": "^5.9.3",
-    "wrangler": "^4.103.0"
-  },
-  "overrides": {
-    "vite": "^7"
+    "wrangler": "^4.112.0"
   }
 }
