@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <script is:inline>
@@ -7,10 +8,7 @@
 		document.documentElement.setAttribute("data-theme", theme);
 		var meta = document.querySelector('meta[name="theme-color"]');
 		if (meta) {
-			meta.setAttribute(
-				"content",
-				theme === "dark" ? "#0f0e1a" : "#fff0f3",
-			);
+			meta.setAttribute("content", theme === "dark" ? "#0f0e1a" : "#fff0f3");
 		}
 	})();
 	document.addEventListener("astro:after-swap", function () {
@@ -18,10 +16,7 @@
 		document.documentElement.setAttribute("data-theme", theme);
 		var meta = document.querySelector('meta[name="theme-color"]');
 		if (meta) {
-			meta.setAttribute(
-				"content",
-				theme === "dark" ? "#0f0e1a" : "#fff0f3",
-			);
+			meta.setAttribute("content", theme === "dark" ? "#0f0e1a" : "#fff0f3");
 		}
 	});
 </script>

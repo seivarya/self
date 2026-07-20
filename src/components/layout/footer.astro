@@ -23,15 +23,13 @@ import Webring from "../ui/webring.astro";
 		</div>
 		<div class="source-code-section">
 			<span>
-				<a href="https://astro.build/" target="_blank" rel="noopener noreferrer">
-					built with astro
-				</a>
+				<a href="https://astro.build/" target="_blank" rel="noopener noreferrer"> built with astro </a>
 			</span>
 		</div>
 	</div>
 </footer>
 <style>
-	.site-footer {
+	footer {
 		margin-top: auto;
 		width: 100%;
 		display: flex;
@@ -54,16 +52,16 @@ import Webring from "../ui/webring.astro";
 	}
 
 	a,
-a:visited,
-a:active {
-	color: var(--color-text-muted);
-	text-decoration: none;
-	border-bottom: 1px solid var(--color-border);
-	padding-bottom: 1px;
-	transition:
-		color 0.25s ease,
-	border-bottom-color 0.25s ease;
-}
+	a:visited,
+	a:active {
+		color: var(--color-text-muted);
+		text-decoration: none;
+		border-bottom: 1px solid var(--color-border);
+		padding-bottom: 1px;
+		transition:
+			color 0.25s ease,
+			border-bottom-color 0.25s ease;
+	}
 
 	a:hover,
 	a:focus {

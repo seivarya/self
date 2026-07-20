@@ -16,7 +16,7 @@ import ClockIcon from "../icons/clock.astro";
 	<div class="avatar-container">
 		<section class="profile-section">
 			<div class="name-container">
-				<a id="theme-toggle" class="author-name" style="text-decoration: none; cursor: pointer;" title="Toggle Theme">
+				<a id="theme-toggle" class="author-name" title="Toggle Theme">
 					<span class="username">shivang</span>
 				</a>
 				<a class="userrole" href="/">engineer</a>
@@ -45,6 +45,8 @@ import ClockIcon from "../icons/clock.astro";
 	}
 	.author-name {
 		display: block;
+		text-decoration: none;
+		cursor: pointer;
 	}
 	.username {
 		margin: 0;
@@ -67,7 +69,7 @@ import ClockIcon from "../icons/clock.astro";
 		cursor: context-menu;
 		transition:
 			color 0.25s ease,
-		border-bottom-color 0.25s ease;
+			border-bottom-color 0.25s ease;
 	}
 
 	.userrole:hover {
@@ -134,27 +136,13 @@ import ClockIcon from "../icons/clock.astro";
 		const themeToggle = document.getElementById("theme-toggle");
 		if (!themeToggle) return;
 		themeToggle.addEventListener("click", () => {
-			const currentTheme =
-				document.documentElement.getAttribute(
-					"data-theme",
-				) || "dark";
-			const newTheme =
-				currentTheme === "dark" ? "light" : "dark";
-			document.documentElement.setAttribute(
-				"data-theme",
-				newTheme,
-			);
+			const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+			const newTheme = currentTheme === "dark" ? "light" : "dark";
+			document.documentElement.setAttribute("data-theme", newTheme);
 			localStorage.setItem("theme", newTheme);
-			const metaThemeColor = document.querySelector(
-				'meta[name="theme-color"]',
-			);
+			const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 			if (metaThemeColor) {
-				metaThemeColor.setAttribute(
-					"content",
-					newTheme === "dark"
-					? "#0f0e1a"
-					: "#fff0f3",
-				);
+				metaThemeColor.setAttribute("content", newTheme === "dark" ? "#0f0e1a" : "#fff0f3");
 			}
 		});
 	});

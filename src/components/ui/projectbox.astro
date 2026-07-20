@@ -2,10 +2,10 @@
 import GithubIcon from "../icons/github.astro";
 
 interface Props {
-title: string;
-description: string;
-tags: string[];
-link?: string;
+	title: string;
+	description: string;
+	tags: string[];
+	link?: string;
 }
 
 const { title, description, tags, link = "/" } = Astro.props;
@@ -33,8 +33,8 @@ const { title, description, tags, link = "/" } = Astro.props;
 		text-decoration: none;
 		background-color: transparent;
 		transition:
-			border-color 0.2s ease,
-		opacity 0.2s ease;
+			border-color 0.25s ease,
+			opacity 0.25s ease;
 		cursor: default;
 	}
 
@@ -61,8 +61,8 @@ const { title, description, tags, link = "/" } = Astro.props;
 	.github-link {
 		color: var(--color-text-muted);
 		transition:
-			color 0.2s ease,
-		transform 0.2s ease;
+			color 0.25s ease,
+			transform 0.25s ease;
 		cursor: pointer;
 	}
 
@@ -76,7 +76,7 @@ const { title, description, tags, link = "/" } = Astro.props;
 		font-weight: bold;
 		color: var(--color-text-primary);
 		letter-spacing: 0.5px;
-		transition: color 0.2s ease;
+		transition: color 0.25s ease;
 	}
 
 	.description {
@@ -84,7 +84,7 @@ const { title, description, tags, link = "/" } = Astro.props;
 		font-size: 1rem;
 		line-height: 1.6;
 		color: var(--color-text-muted);
-		transition: color 0.2s ease;
+		transition: color 0.25s ease;
 	}
 
 	.tags-container {
@@ -99,6 +99,6 @@ const { title, description, tags, link = "/" } = Astro.props;
 		padding: 4px 8px;
 		color: var(--color-text-primary);
 		font-size: 0.9rem;
-		transition: color 0.2s ease;
+		transition: color 0.25s ease;
 	}
 </style>

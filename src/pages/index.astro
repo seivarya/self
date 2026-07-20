@@ -17,13 +17,7 @@ import DiscordIcon from "../components/icons/discord.astro";
 					</a>
 				</div>
 			</div>
-			<p>
-			i'm a cs undergrad trying to get better at
-			backend and low-level programming. basically,
-			figuring out how things work under the hood
-			while still building stuff people can actually
-			use.
-			</p>
+			<p>i'm a cs undergrad trying to get better at backend and low-level programming. basically, figuring out how things work under the hood while still building stuff people can actually use.</p>
 		</div>
 
 		<div class="socials-row">
@@ -32,32 +26,22 @@ import DiscordIcon from "../components/icons/discord.astro";
 		</div>
 
 		<div class="intro-section">
+			<p>lately i've been spending more time understanding systems, memory, performance, tooling.</p>
 			<p>
-			lately i've been spending more time
-			understanding systems, memory, performance,
-			tooling.
-			</p>
-			<p>
-			i also write <a class="blog-link" href="/notes"
-							  >technical blogs</a><span> </span>
-			 whenever i build something or stumble onto something
-			worth sharing.
+				i also write <a class="blog-link" href="/notes">technical blogs</a><span> </span>
+				whenever i build something or stumble onto something worth sharing.
 			</p>
 		</div>
 
 		<div class="contact-section">
 			<p>
-			if you want to collaborate, discuss ideas, or
-			just point out something i got wrong, feel free
-			to reach out:<span> </span>
-			<a class="email-link" href="mailto:hey@seivarya.in">hey@seivarya.in</a>
+				if you want to collaborate, discuss ideas, or just point out something i got wrong, feel free to reach out:<span> </span>
+				<a class="email-link" href="mailto:hey@seivarya.in">hey@seivarya.in</a>
 			</p>
 			<p>
-			outside of programming, i'm probably reading random blogs/books,
-			watching <span class="tsoding-link"><a href="https://www.youtube.com/tsoding">tsoding</a></span> or 
-			something else. i have a bunch of social links around
-			here somewhere, but i'm not active on most of
-			them. if you want a quick reply, <span class="discord-row"><a class="discord-link" href="https://discord.com/users/1345276369566699530" target="_blank" rel="noopener noreferrer">discord</a><span class="icon discord-container"><DiscordIcon /></span></span> is your best bet.
+				outside of programming, i'm probably reading random blogs/books, watching <span class="tsoding-link"><a href="https://www.youtube.com/tsoding">tsoding</a></span> or something else. i have a bunch of social links around here somewhere, but i'm not active on most of them. if you want a quick reply, <span class="discord-row"
+					><a class="discord-link" href="https://discord.com/users/1345276369566699530" target="_blank" rel="noopener noreferrer">discord</a><span class="icon discord-container"><DiscordIcon /></span></span
+				> is your best bet.
 			</p>
 		</div>
 	</section>
@@ -80,6 +64,7 @@ import DiscordIcon from "../components/icons/discord.astro";
 	}
 
 	.contact-section {
+		line-height: 1.7;
 		margin-bottom: 20px;
 	}
 
@@ -143,10 +128,6 @@ import DiscordIcon from "../components/icons/discord.astro";
 		white-space: nowrap;
 	}
 
-	a {
-		color: unset;
-	}
-
 	.contact-section a,
 	.contact-section a:visited,
 	.contact-section a:active,
@@ -190,11 +171,7 @@ import DiscordIcon from "../components/icons/discord.astro";
 
 	.contact-section .discord-link {
 		color: var(--color-brand-discord);
-		border-bottom-color: color-mix(
-			in srgb,
-			var(--color-brand-discord) 30%,
-			transparent
-		);
+		border-bottom-color: color-mix(in srgb, var(--color-brand-discord) 30%, transparent);
 	}
 
 	.contact-section .discord-link:hover {
@@ -236,4 +213,3 @@ import DiscordIcon from "../components/icons/discord.astro";
 		transform: scale(1.6);
 	}
 </style>
-

@@ -14,7 +14,7 @@ const { pathname } = Astro.url;
 </nav>
 
 <style>
-	.nav-bar {
+	nav {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -27,9 +27,9 @@ const { pathname } = Astro.url;
 		gap: 30px;
 	}
 
-	.nav-bar a,
-	.nav-bar a:visited,
-	.nav-bar a:active {
+	nav a,
+	nav a:visited,
+	nav a:active {
 		display: inline-block;
 		color: var(--color-text-muted);
 		text-decoration: none;
@@ -38,18 +38,18 @@ const { pathname } = Astro.url;
 		padding-bottom: 2px;
 		transition:
 			color 0.25s ease,
-		border-bottom-color 0.25s ease;
+			border-bottom-color 0.25s ease;
 	}
 
-	.nav-bar a:hover,
-	.nav-bar a:focus,
-	.nav-bar a.active {
+	nav a:hover,
+	nav a:focus,
+	nav a.active {
 		color: var(--color-text-main);
 		border-bottom-color: var(--color-text-main);
 	}
 
 	@media (max-width: 826px) {
-		.nav-bar {
+		nav {
 			margin-top: 10px;
 		}
 

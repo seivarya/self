@@ -154,18 +154,6 @@
 	-ms-user-select: text;
 }
 
-.post-data::selection {
-	background-color: var(--color-selection);
-}
-
-.post-data::-moz-selection {
-	background-color: var(--color-selection);
-}
-
-.post-data::-webkit-selection {
-	background-color: var(--color-selection);
-}
-
 /* dark theme overrides for shiki code blocks */
 html[data-theme="dark"] .astro-code,
 html[data-theme="dark"] .astro-code span {

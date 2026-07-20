@@ -30,7 +30,7 @@ const projects = [
 	{
 		title: "dsa",
 		description: "practicing data structures and algorithms.",
-		tags: ["c", "data structures and algorithms"],
+		tags: ["c", "data structures"],
 		link: "https://github.com/seivarya/dsa",
 	},
 	{
@@ -47,8 +47,7 @@ const projects = [
 	},
 	{
 		title: "neuralnet",
-		description:
-			"neural network in lua that learns the XOR operation.",
+		description: "neural network in lua that learns the XOR operation.",
 		tags: ["lua", "neural-network"],
 		link: "https://github.com/seivarya/neuralnet",
 	},
@@ -60,8 +59,7 @@ const projects = [
 	},
 	{
 		title: "yt.themes",
-		description:
-			"custom visuals and css theme for the youtube music desktop app.",
+		description: "custom visuals and css theme for the youtube music desktop app.",
 		tags: ["css", "theme"],
 		link: "https://github.com/seivarya/yt.themes",
 	},
@@ -69,26 +67,15 @@ const projects = [
 ---
 
 <Home>
-	<h1 class="page-title">projects</h1>
+	<h1>projects</h1>
 	<p class="page-subtitle">things i've built/ building.</p>
 
 	<div class="projects-grid">
-		{
-		projects.map((p) => (
-		<Projectbox title={p.title} description={p.description} tags={p.tags} link={p.link} />
-		))
-		}
+		{projects.map((p) => <Projectbox title={p.title} description={p.description} tags={p.tags} link={p.link} />)}
 	</div>
 </Home>
 
 <style>
-	.page-subtitle {
-		font-size: 1.05rem;
-		color: var(--color-text-muted);
-		margin-top: -15px;
-		margin-bottom: 40px;
-	}
-
 	.projects-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);

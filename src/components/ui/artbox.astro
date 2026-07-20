@@ -11,10 +11,6 @@ const { title, link } = Astro.props;
 </a>
 
 <style>
-	a {
-		color: unset;
-	}
-
 	.img-container {
 		display: flex;
 		flex-direction: column;
@@ -28,10 +24,9 @@ const { title, link } = Astro.props;
 		width: 100%;
 		height: auto;
 		max-width: 100%;
-
 		transition:
 			transform 0.25s ease,
-		box-shadow 0.25s ease;
+			box-shadow 0.25s ease;
 	}
 
 	.img-container:hover .img {
@@ -48,6 +43,4 @@ const { title, link } = Astro.props;
 	.img-title {
 		font-size: 0.8rem;
 	}
-
-
 </style>
