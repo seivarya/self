@@ -1,9 +1,11 @@
-// For basic styling, /styles/mdx.css will do just fine! Using custom component overrides
+// for basic styling, /styles/mdx.css will do just fine! using custom component overrides
 // for standard HTML elements (h1-h6, blockquote, etc.) strips away compiler-generated
-// attributes (like heading IDs for anchor links). We keep this object empty for now.
+// attributes (like heading IDs for anchor links). We keep this object empty for now. ig?
 
 import Link from "./hyprlink.astro";
+import Pre from "./pre.astro";
 
 export const mdxOverrides = {
 	a: Link,
+	pre: Pre,
 };

@@ -1,0 +1,16 @@
+---
+const props = Astro.props;
+---
+
+<div class="code-block">
+	<div class="code-block-header">
+		<button class="copy-button" onclick="
+			const code = this.closest('.code-block').querySelector('code').innerText;
+			navigator.clipboard.writeText(code).then(() => {
+				this.innerText = 'copied!';
+				setTimeout(() => { this.innerText = 'copy'; }, 2000);
+			});
+		">copy</button>
+	</div>
+	<pre {...props}><slot /></pre>
+</div>

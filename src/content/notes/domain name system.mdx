@@ -11,7 +11,7 @@ on. It's pretty similar to how we type names in our mobile phones and call peopl
 to be Mike Ross to remember everyone's phone number).
 
 That's why the browser queries for IP address to a server and that server 
-is what we call an DNS server. The flow is simple:
+is what we call a DNS server. The flow is simple:
 
 We request the DNS server for the IP of our target website -> the DNS 
 server gives a response -> done. Right? It's not incorrect but for the sake
@@ -82,21 +82,21 @@ different servers. For example: `blog.my.site.com` can host a blog,
 shop.my.site.com can be for shopping products, portfolio.my.site.com can
 be self portfolio etc.
 
-You can create as many subdomains as  you want and each can point to a 
+You can create as many subdomains as you want and each can point to a 
 different IP address or even be hosted on a completely different server. 
 Companies use subdomains to separate different parts of their website or 
-even for  staging/testing environments like dev.my.site.com
+even for staging/testing environments like dev.my.site.com
 
 ## DNS Security and Encryption
 
 By the way, this whole process is highly insecure by default. Our 
 system's stub resolver sends requests over UDP port 53 without encryption. 
 This means anyone can sniff the traffic and see which domains you query! 
-We could even intercept and block the response from `8.8.8.8` 
+We could even intercept and block the response `8.8.8.8` 
 sends and manipulate it such that we send another IP address of another 
 website and eventually hack the user. It's called DNS spoofing. Also, 
-similarly like malicious users our ISPs can also see the queries our stub
+similarly to malicious users our ISPs can also see the queries our stub
 resolver sends. So how do we solve this issue? There is 
-something called DOH \[DNS over https]. We know https is secure version of 
-http that lets us see websites in secure manner and hackers can't see what 
+something called DoH [DNS over HTTPS]. We know HTTPS is the secure version of 
+HTTP that lets us see websites in a secure manner and hackers can't see what 
 websites we are visiting. This is, DNS.

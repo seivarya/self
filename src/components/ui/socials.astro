@@ -46,11 +46,12 @@ const chess = "https://www.chess.com/member/seivarya";
 			</div>
 		</a>
 
-		<a href={bluesky} target="_blank" rel="noopener noreferrer">
+		<!-- no need for bluesky asw. -->
+		<!-- <a href={bluesky} target="_blank" rel="noopener noreferrer">
 			<div class="icon bluesky-container">
 				<BlueskyIcon />
 			</div>
-		</a>
+		</a> -->
 	</div>
 </div>
 
@@ -73,6 +74,7 @@ const chess = "https://www.chess.com/member/seivarya";
 		justify-content: center;
 		color: var(--color-text-muted);
 		cursor: pointer;
+		transform: scale(1.2);
 		transition:
 			color 0.25s ease,
 			transform 0.25s ease;
@@ -87,7 +89,7 @@ const chess = "https://www.chess.com/member/seivarya";
 		fill: var(--color-brand-linkedin);
 	}
 	.icon:hover {
-		transform: scale(1.1);
+		transform: scale(1.6);
 	}
 
 	.github-container {
@@ -111,14 +113,13 @@ const chess = "https://www.chess.com/member/seivarya";
 
 	@media (max-width: 768px) {
 		.icon {
-			height: 20px;
+			height: 30px;
 		}
 		.icon svg {
-			width: 16px;
-			height: 16px;
+			width: 20px;
+			height: 20px;
 		}
-		.bluesky-container,
-		.chess-container {
+		.bluesky-container {
 			display: none;
 		}
 	}

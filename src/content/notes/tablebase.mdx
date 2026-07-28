@@ -17,7 +17,7 @@ Now we know humans play chess, but so do computers. And they’re on a level hum
 
 ### What is a Tablebase?
 
-A **tablebase** is a mathematical database that says any position with 7 or fewer pieces on the board is a solvable state._  
+A **tablebase** is a mathematical database that says any position with 7 or fewer pieces on the board is a solvable state.  
 What does that mean? Looking at all those squares and pieces, you might’ve wondered how many total possibilities exist. Every single move creates a new **state**, and every move you _could’ve_ made also leads to a different possible **state**.
 
 Suppose you move your pawn one square that’s state x. If instead you move another pawn, that’s a totally different state y. And with each new state, the opponent’s options, possible moves, and tactics all change drastically.
@@ -46,7 +46,7 @@ each move creates a _new set_ of an insanely large number of states. Every move 
 
 That’s why chess engines have a concept of **depth**.  
 When you see an engine running at “depth 26” it means that the engine explores the game tree 26 levels deep (13 for each side) and then picks the best move for its side.  
-(How it decides which is the best move is a whole another story.)  
+(How it decides which is the best move is a whole other story.)  
 Even then, the engine doesn’t explore the _full_ tree.
 The average branching factor in chess is around 35, and no computer in the world can represent 35^26 positions. Engines use techniques like **search pruning** to optimize their search, but as of now, ~3700 Elo is the best we can achieve.
 

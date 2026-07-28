@@ -1,133 +1,136 @@
 html {
-	overflow-y: scroll;
-	background-color: var(--color-bg);
-	color: var(--color-text-primary);
-	font-size: 14.5px;
+    overflow-y: scroll;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-size: 20px;
 }
 
 :root {
-	--color-bg: #0f0e1a;
-	--color-text-main: #c0caf5;
-	--color-text-primary: #a9b1d6;
-	--color-text-muted: #565f89;
-	--color-text-hover: #c0caf5;
-	--color-border: #1c1b2e;
-	--color-bg-alt: #0b0a16;
-	--color-text-italic: #bb9af7;
+    --color-bg: #0d0d0d;
+    --color-bg-alt: #181818;
+    --color-text-main: #d8d8d8;
+    --color-text-primary: #b0b0b0;
+    --color-text-muted: #7d7d7d;
+    --color-tech-stack: #7d7d7d;
+    --color-text-hover: #ffffff;
+    --color-text-italic: #9a9a9a;
+    --color-border: #2e2e2e;
 
-	--color-tech-stack: #565f89;
-	--color-tech-stack-span: #a9b1d6;
-	--color-loading: #a9b1d6;
+    --color-tech-stack-span: #b0b0b0;
+    --color-loading: #d8d8d8;
 
-	--color-brand-github: #e6edf3;
-	--color-brand-twitter: #1d9bf0;
-	--color-brand-linkedin: #0a66c2;
-	--color-brand-telegram: #2aabee;
-	--color-brand-discord: #5865f2;
-	--color-brand-chess: #ffffff;
-	--color-brand-bluesky: #0085ff;
-	--color-link-underline: rgba(187, 154, 247, 0.3);
-	--color-selection: rgba(187, 154, 247, 0.25);
+    --color-brand-github: #e6edf3;
+    --color-brand-twitter: #1d9bf0;
+    --color-brand-linkedin: #0a66c2;
+    --color-brand-telegram: #2aabee;
+    --color-brand-discord: #5865f2;
+    --color-brand-chess: #ffffff;
+    --color-brand-bluesky: #0085ff;
+
+    --color-link-underline: rgba(255, 255, 255, 0.18);
+    --color-selection: rgba(255, 255, 255, 0.12);
 }
 
 html[data-theme="light"] {
-	--color-bg: #fff0f3;
-	--color-bg-alt: #ffe8ed;
 
-	--color-text-main: #5c3a48;
-	--color-text-primary: #896274;
-	--color-text-muted: #b8929f;
-	--color-text-hover: #4a2535;
-	--color-text-italic: #d46a94;
+    --color-bg: #F3F3F3;
+    --color-bg-alt: #ECE9E4;
 
-	--color-border: #fdd5de;
+    --color-text-main: #2D2A26;
+    --color-text-primary: #59544D;
+    --color-text-muted: #8D877F;
+    --color-text-hover: #141312;
+    --color-text-italic: #6d6257;
 
-	--color-tech-stack: #b8929f;
-	--color-tech-stack-span: #896274;
-	--color-loading: #5c3a48;
+    --color-border: #d4cec6;
 
-	--color-brand-github: #3d2230;
-	--color-brand-twitter: #1da1f2;
-	--color-brand-linkedin: #0a66c2;
-	--color-brand-telegram: #229ed9;
-	--color-brand-discord: #5865f2;
-	--color-brand-chess: #7a5565;
-	--color-brand-bluesky: #1185fe;
-	--color-link-underline: rgba(212, 106, 148, 0.3);
-	--color-selection: rgba(212, 106, 148, 0.2);
+    --color-tech-stack: #8D877F;
+    --color-tech-stack-span: #59544D;
+    --color-loading: #2D2A26;
+
+    --color-brand-github: #24292f;
+    --color-brand-twitter: #1DA1F2;
+    --color-brand-linkedin: #0A66C2;
+    --color-brand-telegram: #229ED9;
+    --color-brand-discord: #5865F2;
+    --color-brand-chess: #6D6257;
+    --color-brand-bluesky: #1185FE;
+
+    --color-link-underline: rgba(45, 42, 38, 0.18);
+    --color-selection: rgba(45, 42, 38, 0.10);
 }
 
 body {
-	margin: 0;
-	min-height: 100svh;
-	overflow-x: hidden;
-	background-color: var(--color-bg);
-	color: var(--color-text-primary);
-	font-family: "Source Code Pro" !important;
-	font-weight: 300;
-
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
+    margin: 0;
+    min-height: 100svh;
+    overflow-x: hidden;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: "Source Code Pro" !important;
+    font-weight: 100;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 ::selection {
-	background-color: var(--color-selection);
+    background-color: var(--color-selection);
 }
 
 ::-moz-selection {
-	background-color: var(--color-selection);
+    background-color: var(--color-selection);
 }
 
 a {
-	color: unset;
-	cursor: pointer;
-	-webkit-tap-highlight-color: transparent;
-	outline: none;
+    color: unset;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 @media (max-width: 768px) {
-	html {
-		font-size: 11.5px;
-	}
+    html {
+        font-size: 15.5px;
+    }
 }
 
 p a,
 li a {
-	color: var(--color-text-main);
-	text-decoration: none;
-	border-bottom: 1px solid var(--color-link-underline);
-	padding-bottom: 1px;
-	opacity: 0.85;
-	transition:
-		border-bottom-color 0.25s ease,
-		opacity 0.25s ease;
+    color: var(--color-text-main);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-link-underline);
+    padding-bottom: 0px;
+    opacity: 0.85;
+    transition:
+        border-bottom-color 0.25s ease,
+        opacity 0.25s ease;
 }
 
 p a:hover,
 li a:hover {
-	opacity: 1;
-	border-bottom-color: var(--color-text-main);
+    opacity: 1;
+    border-bottom-color: var(--color-text-main);
 }
 
 h1,
 h1.page-title,
 h1.post-heading {
-	font-size: 1.2rem;
-	font-weight: 600;
-	color: var(--color-text-main);
-	border-bottom: 1px solid var(--color-border);
-	padding-bottom: 0.3em;
-	margin-top: 0;
-	margin-bottom: 30px;
-	width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.3em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    display: inline-block;
 }
 
 .page-subtitle {
-	font-size: 1.05rem;
-	color: var(--color-text-muted);
-	margin-top: -15px;
-	margin-bottom: 40px;
+    display: block;
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-top: -15px;
+    margin-bottom: 40px;
 }

@@ -1,21 +1,19 @@
 ---
 import Home from "../layouts/home.astro";
 import Socials from "../components/ui/socials.astro";
-import ResumeIcon from "../components/icons/resume.astro";
-import DiscordIcon from "../components/icons/discord.astro";
 ---
 
 <Home>
+	<h1>home</h1>
+	<p class="page-subtitle">welcome to my page.</p>
 	<section class="about-section">
 		<div class="intro-section">
 			<div class="intro-w-resume">
 				<p>hey, i'm shivang.</p>
-				<p>here's my resume:</p>
-				<div class="resume-icon">
-					<a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-						<ResumeIcon />
-					</a>
-				</div>
+				<p>
+					here's my <span> </span>
+					<a href="/resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+				</p>
 			</div>
 			<p>i'm a cs undergrad trying to get better at backend and low-level programming. basically, figuring out how things work under the hood while still building stuff people can actually use.</p>
 		</div>
@@ -35,181 +33,178 @@ import DiscordIcon from "../components/icons/discord.astro";
 
 		<div class="contact-section">
 			<p>
-				if you want to collaborate, discuss ideas, or just point out something i got wrong, feel free to reach out:<span> </span>
+				if you want to collaborate, discuss ideas, or just point out something i got wrong, shoot me a mail at:<span> </span>
 				<a class="email-link" href="mailto:hey@seivarya.in">hey@seivarya.in</a>
 			</p>
 			<p>
-				outside of programming, i'm probably reading random blogs/books, watching <span class="tsoding-link"><a href="https://www.youtube.com/tsoding">tsoding</a></span> or something else. i have a bunch of social links around here somewhere, but i'm not active on most of them. if you want a quick reply, <span class="discord-row"
-					><a class="discord-link" href="https://discord.com/users/1345276369566699530" target="_blank" rel="noopener noreferrer">discord</a><span class="icon discord-container"><DiscordIcon /></span></span
-				> is your best bet.
+				outside of programming, i'm probably reading random blogs/books, watching <span class="tsoding-link"><a href="https://www.youtube.com/tsoding">tsoding</a></span> or something else.
+			</p>
+			<p>
+				i have a bunch of social links around here somewhere, but i'm not active on most of them. if you want a quick reply, <a class="discord-link" href="https://discord.com/users/1345276369566699530">discord</a> is your best bet.
 			</p>
 		</div>
 	</section>
-</Home>
-<style>
-	.about-section {
-		margin: auto;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 10px;
-	}
-
-	.intro-section {
-		margin-top: 20px;
-		line-height: 1.7;
-		width: 100%;
-		margin-bottom: 0px;
-	}
-
-	.contact-section {
-		line-height: 1.7;
-		margin-bottom: 20px;
-	}
-
-	@media (max-width: 600px) {
-		.contact-section {
-			margin-bottom: 10px;
+	<style>
+		.about-section {
+			margin: 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
 		}
-	}
 
-	.intro-section p,
-	.contact-section p {
-		margin: 0 0 15px 0;
-	}
+		.intro-section {
+			margin-top: 20px;
+			line-height: 1.7;
+			width: 100%;
+			margin-bottom: 0px;
+		}
 
-	.contact-section p:last-child {
-		margin-bottom: 0;
-	}
+		.contact-section {
+			line-height: 1.7;
+			margin-bottom: 20px;
+		}
 
-	.intro-w-resume {
-		display: flex;
-		gap: 10px;
-	}
+		@media (max-width: 600px) {
+			.contact-section {
+				margin-bottom: 10px;
+			}
+		}
 
-	.resume-icon {
-		padding-top: 1.7px;
-		width: 24px;
-		height: 24px;
-		transition: transform 0.2s ease;
-	}
+		.intro-section p,
+		.contact-section p {
+			margin: 0 0 15px 0;
+		}
 
-	.resume-icon:hover {
-		transform: scale(1.1);
-	}
+		.contact-section p:last-child {
+			margin-bottom: 0;
+		}
 
-	.resume-svg {
-		width: 100%;
-		height: 100%;
-		display: block;
-	}
+		.intro-w-resume {
+			display: flex;
+			gap: 10px;
+		}
 
-	@media (max-width: 600px) {
 		.resume-icon {
+			padding-top: 1.7px;
+			width: 24px;
+			height: 24px;
+			transition: transform 0.2s ease;
+		}
+
+		.resume-icon:hover {
+			transform: scale(1.1);
+		}
+
+		.resume-svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+		@media (max-width: 600px) {
+			.resume-icon {
+				width: 16px;
+				height: 16px;
+				padding-top: 0px;
+				transform: translateY(-1.9px) scale(0.94);
+			}
+		}
+
+		.socials-row {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 14px;
+			margin-top: 12px;
+			width: 100%;
+		}
+
+		.socials-label {
+			color: var(--color-text-main);
+			white-space: nowrap;
+		}
+
+		.contact-section a,
+		.contact-section a:visited,
+		.contact-section a:active,
+		.tsoding-link,
+		.tsoding-link:visited,
+		.tsoding-link:active {
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+			padding-bottom: 1px;
+			font-weight: 500;
+			opacity: 0.85;
+			transition:
+				border-bottom-color 0.25s ease,
+				opacity 0.25s ease;
+		}
+
+		.contact-section a:hover,
+		.contact-section a:focus,
+		.tsoding-link:hover,
+		.tsoding-link:focus {
+			opacity: 1;
+		}
+
+		.contact-section .email-link {
+			color: var(--color-text-main);
+			border-bottom-color: var(--color-link-underline);
+		}
+
+		.contact-section .email-link:hover {
+			border-bottom-color: var(--color-text-main);
+		}
+
+		.tsoding-link {
+			color: var(--color-text-main);
+			border-bottom-color: var(--color-link-underline);
+		}
+
+		.tsoding-link:hover {
+			border-bottom-color: var(--color-text-main);
+		}
+
+		.contact-section .discord-link {
+			color: var(--color-brand-discord);
+			border-bottom-color: color-mix(in srgb, var(--color-brand-discord) 30%, transparent);
+		}
+
+		.contact-section .discord-link:hover {
+			border-bottom-color: var(--color-brand-discord);
+		}
+
+		.discord-link {
+			color: var(--color-brand-discord);
+			padding: 0px;
+		}
+
+		.icon {
 			width: 16px;
 			height: 16px;
-			padding-top: 0px;
-			transform: translateY(-1.9px) scale(0.94);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 14px;
+			cursor: default;
+			transition: all 0.25s ease;
 		}
-	}
 
-	.socials-row {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 14px;
-		margin-top: 12px;
-		width: 100%;
-	}
+		.icon svg {
+			width: 28px;
+			height: 28px;
+			fill: currentColor;
+		}
 
-	.socials-label {
-		color: var(--color-text-main);
-		white-space: nowrap;
-	}
+		.discord-container {
+			color: var(--color-brand-discord);
+		}
 
-	.contact-section a,
-	.contact-section a:visited,
-	.contact-section a:active,
-	.tsoding-link,
-	.tsoding-link:visited,
-	.tsoding-link:active {
-		text-decoration: none;
-		border-bottom: 1px solid transparent;
-		padding-bottom: 1px;
-		font-weight: 500;
-		opacity: 0.85;
-		transition:
-			border-bottom-color 0.25s ease,
-			opacity 0.25s ease;
-	}
-
-	.contact-section a:hover,
-	.contact-section a:focus,
-	.tsoding-link:hover,
-	.tsoding-link:focus {
-		opacity: 1;
-	}
-
-	.contact-section .email-link {
-		color: var(--color-text-main);
-		border-bottom-color: var(--color-link-underline);
-	}
-
-	.contact-section .email-link:hover {
-		border-bottom-color: var(--color-text-main);
-	}
-
-	.tsoding-link {
-		color: var(--color-text-main);
-		border-bottom-color: var(--color-link-underline);
-	}
-
-	.tsoding-link:hover {
-		border-bottom-color: var(--color-text-main);
-	}
-
-	.contact-section .discord-link {
-		color: var(--color-brand-discord);
-		border-bottom-color: color-mix(in srgb, var(--color-brand-discord) 30%, transparent);
-	}
-
-	.contact-section .discord-link:hover {
-		border-bottom-color: var(--color-brand-discord);
-	}
-
-	.discord-row {
-		display: inline-flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 6px;
-		vertical-align: middle;
-		white-space: nowrap;
-	}
-
-	.icon {
-		width: 16px;
-		height: 16px;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 14px;
-		cursor: default;
-		transition: all 0.25s ease;
-	}
-
-	.icon svg {
-		width: 28px;
-		height: 28px;
-		fill: currentColor;
-	}
-
-	.discord-container {
-		color: var(--color-brand-discord);
-	}
-
-	.discord-container svg {
-		object-fit: contain;
-		transform: scale(1.6);
-	}
-</style>
+		.discord-container svg {
+			object-fit: contain;
+			transform: scale(1.6);
+		}
+	</style>
+</Home>

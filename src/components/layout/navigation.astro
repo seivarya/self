@@ -6,25 +6,38 @@ const { pathname } = Astro.url;
 	<div class="nav-row">
 		<a href="/" class:list={[{ active: pathname === "/" }]}>home</a>
 		<a href="/projects" class:list={[{ active: pathname.startsWith("/projects") }]} data-astro-prefetch="hover">projects</a>
-		<a href="/notes" class:list={[{ active: pathname.startsWith("/notes") }]} data-astro-prefetch="hover">notes</a>
+		<a href="/notes" class:list={[{ active: pathname.startsWith("/notes") }]} data-astro-prefetch="hover">blogs</a>
 	</div>
 	<div class="nav-row">
-		<a href="/arts" class:list={[{ active: pathname.startsWith("/arts") }]} data-astro-prefetch="hover">arts</a>
+		<a href="/misc" class:list={[{ active: pathname.startsWith("/misc") }]} data-astro-prefetch="hover">misc</a>
+		<a href="/subscribe" class:list={[{ active: pathname.startsWith("/subscribe") }]} data-astro-prefetch="hover">subscribe</a>
 	</div>
+	<!-- for now i think i shouldn't keep arts section. -->
+	<!-- <div class="nav-row">
+		<a href="/arts" class:list={[{ active: pathname.startsWith("/arts") }]} data-astro-prefetch="hover">arts</a>
+		</div> -->
 </nav>
 
 <style>
+	nav.nav-bar {
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+	}
 	nav {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 14px;
+		justify-content: left;
+		gap: 15px;
 		width: fit-content;
 	}
 
 	.nav-row {
 		display: flex;
-		gap: 30px;
+		flex-direction: row;
+		align-items: left;
+		gap: 25px;
 	}
 
 	nav a,
@@ -50,11 +63,11 @@ const { pathname } = Astro.url;
 
 	@media (max-width: 826px) {
 		nav {
-			margin-top: 10px;
+			margin-top: 0px;
 		}
 
 		.nav-row {
-			justify-content: center;
+			justify-content: left;
 		}
 	}
 </style>

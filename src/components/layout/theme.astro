@@ -4,19 +4,19 @@
 
 <script is:inline>
 	(function () {
-		var theme = localStorage.getItem("theme") || "dark";
+		var theme = localStorage.getItem("theme") || "light";
 		document.documentElement.setAttribute("data-theme", theme);
 		var meta = document.querySelector('meta[name="theme-color"]');
 		if (meta) {
-			meta.setAttribute("content", theme === "dark" ? "#0f0e1a" : "#fff0f3");
+			meta.setAttribute("content", theme === "light" ? "#f3f3f3" : "#0d0d0d");
 		}
 	})();
 	document.addEventListener("astro:after-swap", function () {
-		var theme = localStorage.getItem("theme") || "dark";
+		var theme = localStorage.getItem("theme") || "light";
 		document.documentElement.setAttribute("data-theme", theme);
 		var meta = document.querySelector('meta[name="theme-color"]');
 		if (meta) {
-			meta.setAttribute("content", theme === "dark" ? "#0f0e1a" : "#fff0f3");
+			meta.setAttribute("content", theme === "light" ? "#f3f3f3" : "#0d0d0d");
 		}
 	});
 </script>
