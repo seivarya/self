@@ -88,6 +88,7 @@ a {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     outline: none;
+    border-color: pink;
 }
 
 @media (max-width: 768px) {
